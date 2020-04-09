@@ -10,7 +10,7 @@ const config = {
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'src/public/index.html'
         }),
     ],
     module: {
@@ -46,20 +46,6 @@ const config = {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
-            {
-                test: /\.svg$/,
-                use: [
-                    {
-                        loader: "babel-loader"
-                    },
-                    {
-                        loader: "react-svg-loader",
-                        options: {
-                            jsx: true
-                        }
-                    }
-                ]
-            }
         ]
     },
     resolve: {
