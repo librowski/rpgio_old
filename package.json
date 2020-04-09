@@ -1,0 +1,43 @@
+{
+  "name": "rpgio",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "dev": "webpack --watch --config webpack.config.js --mode=development & electron src/main.js --with-devtools",
+    "dist": "webpack --config webpack.config.js && electron-builder",
+    "lint:fix": "npx eslint . --ext .js,.ts,.tsx --fix",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/librowski/rpgio.git"
+  },
+  "author": "Jan Librowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/librowski/rpgio/issues"
+  },
+  "homepage": "https://github.com/librowski/rpgio#readme",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-feather": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "babel-loader": "^8.1.0",
+    "electron": "^8.2.1",
+    "electron-builder": "^22.4.1",
+    "html-webpack-plugin": "^4.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

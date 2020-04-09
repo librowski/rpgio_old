@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es2020",
+        "jsx": "react",
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "plugins": [
+            {
+                "name": "typescript-styled-plugin"
+            }
+        ],
+        "types": [
+            "react",
+            "react-dom",
+            "node"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
