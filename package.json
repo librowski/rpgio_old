@@ -5,9 +5,9 @@
     "main": "src/electron/main.js",
     "scripts": {
         "dev": "webpack --watch --config webpack.config.js --mode=development & electron ./src/electron/main.js --with-devtools",
-        "dist": "webpack --config webpack.config.js && electron-builder --dir",
-        "lint:strict": "npx eslint . --ext .js,.ts,.tsx --max-warnings 0",
-        "lint:fix": "npx eslint . --ext .ts,.tsx --fix",
+        "dist": "webpack --config webpack.config.js && electron-builder -p never",
+        "lint:strict": "eslint . --ext .js,.ts,.tsx --max-warnings 0",
+        "lint:fix": "eslint . --ext .ts,.tsx --fix",
         "test": "jest src",
         "postinstall": "electron-builder install-app-deps"
     },
