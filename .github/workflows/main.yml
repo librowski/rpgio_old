@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Lint
+      run: |
+        yarn install
+        yarn lint:strict
+    
+    - name: Test & Upload codecov
+      run: |
+        yarn test --coverage
+        bash <(curl -s https://codecov.io/bash)
+    
+    - name: Build
+      run: yarn dist
