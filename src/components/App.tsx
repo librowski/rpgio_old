@@ -1,5 +1,5 @@
 import * as React from 'react';
 
 export const App: React.FC = () => {
-    return <h1>Hello world</h1>;
+    return <h1 style={{ background: 'white' }}>Hello world</h1>;
 };

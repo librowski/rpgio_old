@@ -2,11 +2,11 @@
   "name": "rpgio",
   "version": "0.0.1",
   "description": "",
-  "main": "./src/main.js",
+  "main": "src/electron/main.js",
   "scripts": {
-    "dev": "webpack --watch --config webpack.config.js --mode=development & electron src/main.js --with-devtools",
+    "dev": "webpack --watch --config webpack.config.js --mode=development & electron ./src/electron/main.js --with-devtools",
     "dist": "webpack --config webpack.config.js && electron-builder",
-    "lint:fix": "npx eslint . --ext .js,.ts,.tsx --fix",
+    "lint:fix": "npx eslint . --ext .ts,.tsx --fix",
     "postinstall": "electron-builder install-app-deps"
   },
   "repository": {
