@@ -3,6 +3,6 @@ module.exports = {
     coverageDirectory: 'coverage',
     collectCoverageFrom: ['src/**/*.{ts,tsx}'],
     setupFilesAfterEnv: ['./src/test/jest-setup.ts'],
-    roots: ['/src/'],
+    roots: ['src'],
     testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/'],
 };
