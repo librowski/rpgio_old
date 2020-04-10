@@ -1,8 +1,33 @@
+/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
 const { installDevtools } = require('./installDevtools');
 const { windowOptions } = require('./windowOptions');
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
+
+let mainWindow;
+
+const createWindow = () => {
+    mainWindow = new BrowserWindow(windowOptions);
+
+    const startUrl =
+        process.env.ELECTRON_START_URL ||
+        url.format({
+            pathname: path.join(__dirname, '../../build/index.html'),
+            protocol: 'file:',
+            slashes: true,
+        });
+
+    mainWindow.loadURL(startUrl);
+    mainWindow.on('closed', () => (mainWindow = null));
+    mainWindow.webContents.openDevTools();
+
+    if ('--with-devtools' in process.execArgv) {
+        installDevtools();
+    }
+};
+
+// App settings and listeners
 
 app.on('ready', createWindow);
 
@@ -21,25 +46,3 @@ app.on('activate', function () {
 app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 
 app.applicationMenu = null;
-
-let mainWindow;
-
-function createWindow() {
-    mainWindow = new BrowserWindow(windowOptions);
-
-    const startUrl =
-        process.env.ELECTRON_START_URL ||
-        url.format({
-            pathname: path.join(__dirname, '../../build/index.html'),
-            protocol: 'file:',
-            slashes: true,
-        });
-
-    mainWindow.loadURL(startUrl);
-    mainWindow.on('closed', () => (mainWindow = null));
-    mainWindow.webContents.openDevTools();
-
-    if ('--with-devtools' in process.execArgv) {
-        installDevtools();
-    }
-}
