@@ -8,7 +8,7 @@
         "dist": "webpack --config webpack.config.js && electron-builder",
         "lint:strict": "npx eslint . --ext .js,.ts,.tsx --max-warnings 0",
         "lint:fix": "npx eslint . --ext .ts,.tsx --fix",
-        "test": "jest",
+        "test": "jest src",
         "postinstall": "electron-builder install-app-deps"
     },
     "repository": {
@@ -74,7 +74,7 @@
         "appId": "rpgio",
         "files": [
             "./build/**/*",
-            "./src/main.js"
+            "./src/electron/main.js"
         ],
         "mac": {
             "category": "public.app-category.music"
