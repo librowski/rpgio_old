@@ -1,5 +1,9 @@
 import * as React from 'react';
+import { Provider } from './providers/Provider';
+import { Main } from './views/Main/Main';
 
-export const App: React.FC = () => {
-    return <h1 style={{ background: 'white' }}>Hello world</h1>;
-};
+export const App: React.FC = () => (
+    <Provider>
+        <Main />
+    </Provider>
+);

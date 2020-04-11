@@ -4,7 +4,7 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
+        'plugin:react-hooks/recommended'
     ],
     parserOptions: {
         ecmaVersion: 2018,
@@ -17,7 +17,7 @@ module.exports = {
         'react/prop-types': 0,
         'import/no-extraneous-dependencies': [
             2,
-            { devDependencies: ['**/*.test.{ts,tsx,js}']}
+            { devDependencies: ['**/*.test.{ts,tsx,js}', './src/electron/*.js']}
         ],
         'no-console': 1,
         'linebreak-style': 0,
@@ -26,6 +26,7 @@ module.exports = {
         'indent': [1, 4],
         'quotes': [1, 'single'],
         'object-curly-spacing': [1, 'always'],
+        'curly': 1,
     },
     settings: {
         react: {
