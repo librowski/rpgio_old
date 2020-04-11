@@ -1,7 +1,10 @@
 {
     "name": "rpgio",
     "version": "0.0.1",
-    "description": "",
+    "description": "Something",
+    "author": "Jan Librowski",
+    "private": true,
+    "license": "MIT",
     "main": "src/electron/main.js",
     "scripts": {
         "dev": "webpack --watch --config webpack.config.js --mode=development & electron ./src/electron/main.js --with-devtools",
@@ -15,8 +18,6 @@
         "type": "git",
         "url": "git+https://github.com/librowski/rpgio.git"
     },
-    "author": "Jan Librowski",
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/librowski/rpgio/issues"
     },
