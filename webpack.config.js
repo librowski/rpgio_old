@@ -10,7 +10,7 @@ const config = {
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/public/index.html'
+            template: 'src/assets/index.html'
         }),
     ],
     module: {
