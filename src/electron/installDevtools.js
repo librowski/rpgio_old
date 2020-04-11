@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const installDevtools = () => {
     const {
         default: installExtension,
