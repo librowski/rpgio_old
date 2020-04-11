@@ -1,6 +1,9 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-electron-language-detector';
+import { en } from './locales/en';
+import { pl } from './locales/pl';
+import { ru } from './locales/ru';
+const LanguageDetector = window.require('i18next-electron-language-detector');
 
 i18n
     .use(LanguageDetector)
@@ -8,14 +11,17 @@ i18n
     .init({
         initImmediate: false,
         fallbackLng: 'en',
-        whitelist: ['en', 'pl'],
+        whitelist: ['en', 'pl', 'ru'],
         nonExplicitWhitelist: true,
         resources: {
             en: {
-                translation: require('./locales/en.json'),
+                translation: en,
             },
             pl: {
-                translation: require('./locales/pl.json'),
+                translation: pl,
+            },
+            ru: {
+                translation: ru,
             },
         },
         debug: process.env.NODE_ENV === 'development',
