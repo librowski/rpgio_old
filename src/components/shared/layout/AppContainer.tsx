@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { TopBar } from './TopBar';
+import { TopBar } from './TopBar/TopBar';
 import { getColor } from '../styles/theme';
 
 const Container = styled.div`

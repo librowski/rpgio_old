@@ -45,4 +45,3 @@ app.on('activate', function () {
 
 app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 
-app.applicationMenu = null;

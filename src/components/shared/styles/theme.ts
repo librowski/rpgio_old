@@ -16,6 +16,13 @@ export const theme = {
     sizes: {
         topBarHeight: 48,
     },
+    textSizes: {
+        xl: 24,
+        lg: 16,
+        md: 14,
+        sm: 12,
+        xs: 11
+    },
     zIndex: {
         content: 100,
         overlay: 200,
@@ -23,16 +30,20 @@ export const theme = {
     }
 };
 
-export const getFromTheme = <N extends keyof Theme, K extends keyof Theme[N]>(
-    namespace: N,
-    key: K,
-) => ({ theme }: { theme: Theme }) => theme[namespace][key];
+type NamespaceName = keyof Theme;
+type Namespace<N extends NamespaceName> = Theme[N];
+type Key<N extends NamespaceName> = keyof Namespace<N>;
 
-export const getSize = (key: keyof typeof theme.sizes) =>
-    getFromTheme('sizes', key);
+export const getFromTheme = <N extends NamespaceName>(namespace: N) =>
+    (key: Key<N>) => ({ theme }: { theme: Theme }) => theme[namespace][key];
 
-export const getColor = (key: keyof typeof theme.colors) =>
-    getFromTheme('colors', key);
+export type Size = Key<'sizes'>;
+export type Color = Key<'colors'>;
+export type ZIndex = Key<'zIndex'>;
+export type TextSize = Key<'textSizes'>;
 
-export const getZIndex = (key: keyof typeof theme.zIndex) =>
-    getFromTheme('zIndex', key);
+export const getSize = getFromTheme('sizes');
+export const getColor = getFromTheme('colors');
+export const getZIndex = getFromTheme('zIndex');
+export const getTextSize = getFromTheme('textSizes');
+export const getProp = <P>(propName: keyof P) => (props: P) => props[propName];

@@ -27,6 +27,7 @@ module.exports = {
         'quotes': [1, 'single'],
         'object-curly-spacing': [1, 'always'],
         'curly': 1,
+        'max-len': 1
     },
     settings: {
         react: {
