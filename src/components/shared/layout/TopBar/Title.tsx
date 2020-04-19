@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Text } from '../../typography/Text';
+import { Typography } from '../../Typography/Typography';
 import { app } from '../../../../electron/electron';
 
 const Container = styled.div`
@@ -9,15 +9,15 @@ const Container = styled.div`
     align-items: center;
 `;
 
-const Version = styled(Text)`
+const Version = styled(Typography)`
     margin-left: 8px;
 `;
 
 export const Title: React.FC = () => (
     <Container>
-        <Text color={'accent'} weight={'medium'} size={'lg'}>
+        <Typography color={'accent'} weight={'medium'} size={'lg'}>
             Maestro
-        </Text>
+        </Typography>
         <Version size={'sm'}>
             v{app.getVersion()}
         </Version>

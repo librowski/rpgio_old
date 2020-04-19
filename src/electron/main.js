@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { installDevtools } = require('./installDevtools');
 const { windowOptions } = require('./windowOptions');
+const { isDev } = require('../../utils/modeCheck');
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
@@ -22,7 +23,7 @@ const createWindow = () => {
     mainWindow.on('closed', () => (mainWindow = null));
     mainWindow.webContents.openDevTools();
 
-    if ('--with-devtools' in process.execArgv) {
+    if (isDev()) {
         installDevtools();
     }
 };

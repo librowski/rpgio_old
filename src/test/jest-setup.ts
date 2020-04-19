@@ -1,6 +1,8 @@
 /* eslint-disable */
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import 'jest-styled-components'
 
-configure({ adapter: new Adapter() });
+window.require = require;
+
+jest.mock('../i18n/i18n', () => ({
+    i18n: jest.fn()
+}));

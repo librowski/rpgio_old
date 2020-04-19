@@ -17,7 +17,7 @@ module.exports = {
         'react/prop-types': 0,
         'import/no-extraneous-dependencies': [
             2,
-            { devDependencies: ['**/*.test.{ts,tsx,js}', './src/electron/*.js']}
+            { devDependencies: ['**/*.test.{ts,tsx,js}', './src/test/*.ts', './src/electron/*.js']}
         ],
         'no-console': 1,
         'linebreak-style': 0,
