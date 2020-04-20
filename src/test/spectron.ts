@@ -11,7 +11,7 @@ export const createAppWrapper = () => {
         args: [appPath],
     });
 
-    const start = async () => await app.start();
+    const start = async () => app.start();
 
     const teardown = async () => {
         if (app?.isRunning()) {
