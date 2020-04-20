@@ -1,5 +1,6 @@
 /* eslint-disable */
 import 'jest-styled-components'
+import 'jest-enzyme';
 
 window.require = require;
 

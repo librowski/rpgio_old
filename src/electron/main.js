@@ -21,9 +21,9 @@ const createWindow = () => {
 
     mainWindow.loadURL(startUrl);
     mainWindow.on('closed', () => (mainWindow = null));
-    mainWindow.webContents.openDevTools();
 
     if (isDev()) {
+        mainWindow.webContents.openDevTools();
         installDevtools();
     }
 };

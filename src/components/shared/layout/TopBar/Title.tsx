@@ -13,12 +13,14 @@ const Version = styled(Typography)`
     margin-left: 8px;
 `;
 
+export const versionTestId = 'versionTestId';
+
 export const Title: React.FC = () => (
     <Container>
         <Typography color={'accent'} weight={'medium'} size={'lg'}>
             Maestro
         </Typography>
-        <Version size={'sm'}>
+        <Version size={'sm'} data-test-id={versionTestId}>
             v{app.getVersion()}
         </Version>
     </Container>

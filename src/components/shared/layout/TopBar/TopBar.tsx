@@ -18,8 +18,10 @@ const Container = styled.div`
     }
 `;
 
+export const topBarTestId = 'topBarTestId';
+
 export const TopBar: React.FC = () => (
-    <Container>
+    <Container data-test-id={topBarTestId}>
         <Title />
     </Container>
 );
