@@ -17,7 +17,7 @@ module.exports = {
         'react/prop-types': 0,
         'import/no-extraneous-dependencies': [
             2,
-            { devDependencies: ['**/*.test.{ts,tsx,js}', './src/electron/*.js']}
+            { devDependencies: ['**/*.test.{ts,tsx,js}', './src/test/*.ts', './src/electron/*.js']}
         ],
         'no-console': 1,
         'linebreak-style': 0,
@@ -27,6 +27,7 @@ module.exports = {
         'quotes': [1, 'single'],
         'object-curly-spacing': [1, 'always'],
         'curly': 1,
+        'max-len': 1
     },
     settings: {
         react: {

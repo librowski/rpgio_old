@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { installDevtools } = require('./installDevtools');
 const { windowOptions } = require('./windowOptions');
+const { isDev } = require('../../utils/modeCheck');
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
@@ -20,9 +21,9 @@ const createWindow = () => {
 
     mainWindow.loadURL(startUrl);
     mainWindow.on('closed', () => (mainWindow = null));
-    mainWindow.webContents.openDevTools();
 
-    if ('--with-devtools' in process.execArgv) {
+    if (isDev()) {
+        mainWindow.webContents.openDevTools();
         installDevtools();
     }
 };
@@ -45,4 +46,3 @@ app.on('activate', function () {
 
 app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 
-app.applicationMenu = null;
