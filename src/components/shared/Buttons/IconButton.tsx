@@ -7,7 +7,7 @@ type Props =
     & Partial<React.ComponentProps<typeof Container>>
     & {
         icon: Icon;
-        onClick: React.MouseEventHandler;
+        onClick?: React.MouseEventHandler;
     };
 
 export const IconButton: React.FC<Props> = ({

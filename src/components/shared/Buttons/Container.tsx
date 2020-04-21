@@ -11,19 +11,23 @@ export const Container: React.FC<Props> = styled.div<Props>(({
     size,
     color,
 }) => css`
-    padding: ${0.25 * size}px;
+    height: ${1.5 * size}px;
+    width: ${1.5 * size}px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100%;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.02);
     cursor: pointer;
     transition: 300ms ease background;
 
     > svg {
-        fill: ${getColor(color)};
+        stroke: ${getColor(color)};
         transition: 300ms ease filter;
     }
 
     :hover {
-        background: rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.05);
 
         > svg {
             filter: brightness(1.15);

@@ -1,2 +1,5 @@
-const { app } = window.require('electron').remote;
-export { app };
+const { app, getCurrentWindow } = window.require('electron').remote;
+
+const appWindow = getCurrentWindow();
+
+export { app, appWindow };
