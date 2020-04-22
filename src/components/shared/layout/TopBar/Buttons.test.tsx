@@ -73,7 +73,7 @@ describe('[E2E] <Buttons />', () => {
         await start(app);
     });
 
-    afterEach(async () => await teardown(app));
+    afterEach(async () => teardown(app));
 
     it('should minimize window when minimize button was clicked', async () => {
         const minimizeButton = getByTestId(app, minimizeButtonTestId);
