@@ -1,7 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Typography } from '../../Typography/Typography';
-import { app } from '../../../../electron/electron';
+import { useSelector } from 'react-redux';
+import { appInfoSelector } from '../../../../store/app/selectors';
 
 const Container = styled.div`
     display: flex;
@@ -25,13 +26,16 @@ export const Version = styled(Typography)`
 
 export const versionTestId = 'versionTestId';
 
-export const Title: React.FC = () => (
-    <Container>
-        <AppName color={'accent'} weight={'medium'} size={'lg'}>
-            rpgio
-            <Version as={'span'} size={'sm'} data-test-id={versionTestId}>
-                v{app.getVersion()}
-            </Version>
-        </AppName>
-    </Container>
-);
+export const Title: React.FC = () => {
+    const { name, version } = useSelector(appInfoSelector);
+    return (
+        <Container>
+            <AppName color={'accent'} weight={'medium'} size={'lg'}>
+                { name }
+                <Version as={'span'} size={'sm'} data-test-id={versionTestId}>
+                    v{ version }
+                </Version>
+            </AppName>
+        </Container>
+    );
+};

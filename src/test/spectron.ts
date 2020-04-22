@@ -1,32 +1,27 @@
 import { Application } from 'spectron';
 import path from 'path';
+
 const electronPath = path.join(
     __dirname, '../../', 'node_modules', '.bin', 'electron'
 );
 const appPath = path.join(__dirname, '../electron/main.js');
 
-export const createAppWrapper = () => {
-    const app = new Application({
-        path: electronPath,
-        args: [appPath],
-    });
+export const createSpectronApp = () => new Application({
+    path: electronPath,
+    args: [appPath],
+});
 
-    const start = async () => app.start();
+export const start = async (app: Application) => {
+    await app.start();
+    await app.client.waitUntilWindowLoaded();
+};
 
-    const teardown = async () => {
-        if (app?.isRunning()) {
-            await app.stop();
-        }
-    };
-
-    const getByTestId = (testId: string) =>
-        app.client.$(`[data-test-id="${testId}"]`);
-
-    return {
-        app,
-        start,
-        teardown,
-        getByTestId
+export const teardown = async (app: Application) => {
+    if (app?.isRunning()) {
+        await app.stop();
     }
-}
+};
+
+export const getByTestId = (app: Application, testId: string) =>
+    app.client.$(`[data-test-id="${testId}"]`);
 

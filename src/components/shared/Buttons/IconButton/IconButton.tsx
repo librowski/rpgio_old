@@ -15,8 +15,9 @@ export const IconButton: React.FC<Props> = ({
     color = 'primaryText',
     size = 14,
     onClick = _.noop,
+    ...rest
 }) => (
-    <Container color={color} size={size}>
-        <Icon size={size} onClick={onClick} />
+    <Container color={color} size={size} onClick={onClick} {...rest}>
+        <Icon size={size} />
     </Container>
 );

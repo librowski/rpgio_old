@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { IconButton } from '../../Buttons/IconButton';
+import { IconButton } from '../../Buttons/IconButton/IconButton';
 import { Maximize, Minus, X } from 'react-feather';
 import { useDispatch } from 'react-redux';
 import { maximize, minimize, quit } from '../../../../store/app/app';
@@ -19,6 +19,10 @@ const Container = styled.div`
     }
 `
 
+export const minimizeButtonTestId = 'minimizeButtonTestId';
+export const maximizeButtonTestId = 'maximizeButtonTestId';
+export const quitButtonTestId = 'quitButtonTestId';
+
 export const Buttons: React.FC = () => {
     const dispatch = useDispatch();
 
@@ -28,9 +32,18 @@ export const Buttons: React.FC = () => {
 
     return (
         <Container>
-            <IconButton icon={Minus} onClick={onMinimize} />
-            <IconButton icon={Maximize} onClick={onMaximize} />
-            <IconButton icon={X} onClick={onClose} />
+            <IconButton
+                data-test-id={minimizeButtonTestId}
+                icon={Minus}
+                onClick={onMinimize} />
+            <IconButton
+                data-test-id={maximizeButtonTestId}
+                icon={Maximize}
+                onClick={onMaximize} />
+            <IconButton
+                data-test-id={quitButtonTestId}
+                icon={X}
+                onClick={onClose} />
         </Container>
     );
 }

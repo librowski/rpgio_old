@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
-import { Color, getColor } from '../styles/theme';
+import { Color, getColor } from '../../styles/theme';
 import * as React from 'react';
 
 type Props = {
     size: number;
     color: Color;
+    onClick: React.MouseEventHandler;
 }
 
 export const Container: React.FC<Props> = styled.div<Props>(({
