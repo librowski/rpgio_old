@@ -18,4 +18,7 @@ const soundsSlice = createSlice({
 const { actions, reducer } = soundsSlice;
 const { addTest } = actions;
 
-export { reducer as soundsReducer, addTest };
+export {
+    reducer as soundsReducer,
+    addTest
+};

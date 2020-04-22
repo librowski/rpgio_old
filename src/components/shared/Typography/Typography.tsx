@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 type FontWeight = 'regular' | 'medium';
 const fontWeightMap: Record<FontWeight, string> = {
-    regular: 'regular',
+    regular: 'normal',
     medium: '500',
 };
 

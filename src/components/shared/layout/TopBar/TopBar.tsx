@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { getColor, getSize } from '../../styles/theme';
 import { Title } from './Title';
+import { Buttons } from './Buttons';
 
 const Container = styled.div`
     display: flex;
@@ -23,6 +24,7 @@ export const topBarTestId = 'topBarTestId';
 export const TopBar: React.FC = () => (
     <Container data-test-id={topBarTestId}>
         <Title />
+        <Buttons />
     </Container>
 );
 

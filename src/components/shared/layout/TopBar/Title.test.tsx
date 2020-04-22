@@ -1,22 +1,29 @@
-import { app as appMock } from '../../../../electron/electron';
 import React from 'react';
 import { Title } from './Title';
-import { mount } from '../../../../test/enzyme';
+import { mount, toMock } from '../../../../test/enzyme';
+import { appInfoSelector } from '../../../../store/app/selectors';
 
-jest.mock('../../../../electron/electron', () => ({
-    app: {
-        getVersion: jest.fn(),
-    }
+
+jest.mock('../../../../store/app/selectors', () => ({
+    appInfoSelector: jest.fn(),
 }));
 
+jest.mock('../../../../electron/electron');
+
 describe('[UNIT] <Title />', () => {
-    it('should contain app version information', async () => {
-        appMock.getVersion.mockReturnValueOnce('1.37');
+    it('should contain app title and version information', async () => {
+        toMock(appInfoSelector).mockReturnValue({
+            name: 'rpgio',
+            version: '1.37',
+        });
 
         const wrapper = mount(
             <Title />
         );
 
-        expect(wrapper.text()).toContain('1.37');
+        const text = wrapper.text();
+
+        expect(text).toContain('1.37');
+        expect(text).toContain('rpgio');
     });
 });

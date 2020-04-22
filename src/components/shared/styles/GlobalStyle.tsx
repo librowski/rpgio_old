@@ -23,5 +23,10 @@ export const GlobalStyle = createGlobalStyle`
         background: transparent;
         overflow: hidden;
         font-family: 'DM Sans', sans-serif;
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
     }
 `;

@@ -1,4 +1,4 @@
-import { addTest, soundsReducer } from './reducer';
+import { addTest, soundsReducer } from './sounds';
 import { SoundsState } from './types';
 
 describe('soundsReducer()', () => {
