@@ -1,8 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { app, appWindow } from '../../../../electron/electron';
 import { IconButton } from '../../Buttons/IconButton';
-import { Settings, Maximize, X } from 'react-feather';
+import { Maximize, Minus, X } from 'react-feather';
+import { useDispatch } from 'react-redux';
+import { maximize, minimize, quit } from '../../../../store/app/app';
 
 const Container = styled.div`
     display: flex;
@@ -10,7 +11,7 @@ const Container = styled.div`
     align-items: center;
 
     > div {
-        margin: 0 8px;
+        margin: 0 4px;
     }
 
     > div :last-of-type {
@@ -19,12 +20,15 @@ const Container = styled.div`
 `
 
 export const Buttons: React.FC = () => {
-    const onClose = () => app.quit();
-    const onMaximize = () => appWindow.maximize();
+    const dispatch = useDispatch();
+
+    const onClose = () => dispatch(quit());
+    const onMinimize = () => dispatch(minimize());
+    const onMaximize = () => dispatch(maximize());
 
     return (
         <Container>
-            <IconButton icon={Settings} color={'accent'} />
+            <IconButton icon={Minus} onClick={onMinimize} />
             <IconButton icon={Maximize} onClick={onMaximize} />
             <IconButton icon={X} onClick={onClose} />
         </Container>

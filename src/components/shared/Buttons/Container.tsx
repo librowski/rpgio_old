@@ -23,7 +23,7 @@ export const Container: React.FC<Props> = styled.div<Props>(({
 
     > svg {
         stroke: ${getColor(color)};
-        transition: 300ms ease filter;
+        transition: 100ms ease filter, 100ms ease stroke;
     }
 
     :hover {
@@ -31,6 +31,7 @@ export const Container: React.FC<Props> = styled.div<Props>(({
 
         > svg {
             filter: brightness(1.15);
+            stroke: ${getColor('accent')};
         }
     }
 `);

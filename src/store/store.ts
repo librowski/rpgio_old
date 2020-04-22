@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { soundsReducer } from './sounds/reducer';
+import { soundsReducer } from './sounds/sounds';
 
 const rootReducer = combineReducers({
     sounds: soundsReducer,

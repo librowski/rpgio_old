@@ -9,19 +9,29 @@ const Container = styled.div`
     align-items: center;
 `;
 
-const Version = styled(Typography)`
+export const AppName = styled(Typography)`
+    cursor: pointer;
+    transition: 100ms ease filter;
+
+    :hover {
+        filter: brightness(1.15);
+    }
+`;
+
+export const Version = styled(Typography)`
     margin-left: 8px;
+    opacity: 0.5;
 `;
 
 export const versionTestId = 'versionTestId';
 
 export const Title: React.FC = () => (
     <Container>
-        <Typography color={'accent'} weight={'medium'} size={'lg'}>
-            Maestro
-        </Typography>
-        <Version size={'sm'} data-test-id={versionTestId}>
-            v{app.getVersion()}
-        </Version>
+        <AppName color={'accent'} weight={'medium'} size={'lg'}>
+            rpgio
+            <Version as={'span'} size={'sm'} data-test-id={versionTestId}>
+                v{app.getVersion()}
+            </Version>
+        </AppName>
     </Container>
 );

@@ -13,7 +13,7 @@ type Props =
 export const IconButton: React.FC<Props> = ({
     icon: Icon,
     color = 'primaryText',
-    size = 18,
+    size = 14,
     onClick = _.noop,
 }) => (
     <Container color={color} size={size}>
