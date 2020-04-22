@@ -9,6 +9,10 @@ const appPath = path.join(__dirname, '../electron/main.js');
 export const createSpectronApp = () => new Application({
     path: electronPath,
     args: [appPath],
+    chromeDriverArgs: [
+        '--disable-dev-shm-usage',
+        '--no-sandbox',
+    ]
 });
 
 export const start = async (app: Application) => {
