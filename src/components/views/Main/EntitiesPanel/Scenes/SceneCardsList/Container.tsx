@@ -1,23 +1,22 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { getSize } from '../../../../../shared/styles/theme';
 
 type Props = {
     width: number;
-    sceneCardWidth: number;
 }
 
-export const Container = styled.div<Props>(({
-    width,
-    sceneCardWidth,
-}) => css`
+export const Container = styled.div<Props>`
+    position: relative;
+    height: 100%;
     will-change: width;
-    width: ${width}px;
-    height: 240px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 100%;
+    grid-gap: ${getSize('sceneCardSpacing')}px;
 
-    > div {
-        will-change: width;
-        width: ${sceneCardWidth}px;
+    @media (min-height: 800px) {
+        grid-auto-rows: calc(50% - ${getSize('sceneCardSpacing')}px);
     }
-`);
+`;

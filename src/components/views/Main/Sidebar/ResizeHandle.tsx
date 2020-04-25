@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { useResizeListeners } from './useResizeListeners';
+import { useResize } from './useResize';
 
 const VerticalHandle = styled.div`
     position: absolute;
@@ -13,12 +13,11 @@ const VerticalHandle = styled.div`
 `;
 
 export const ResizeHandle: React.FC = () => {
-    const { onMouseDown, onMouseUp } = useResizeListeners();
+    const { onMouseDown } = useResize();
 
     return (
         <VerticalHandle
             onMouseDown={onMouseDown}
-            onMouseUp={onMouseUp}
         />
     );
 }

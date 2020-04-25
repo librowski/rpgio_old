@@ -17,8 +17,7 @@ export const theme = {
         topBarHeight: 48,
         mainPadding: 32,
         sceneCardSpacing: 10,
-        sceneCardHeight: 100,
-        sceneNameBarHeight: 24,
+        sceneNameBarHeight: 32,
     },
     textSizes: {
         xl: 24,
