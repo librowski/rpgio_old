@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { IconButton } from '../../Buttons/IconButton/IconButton';
+import { IconButton } from '../../buttons/IconButton/IconButton';
 import { Maximize, Minus, X } from 'react-feather';
 import { useDispatch } from 'react-redux';
 import { maximize, minimize, quit } from '../../../../store/app/app';

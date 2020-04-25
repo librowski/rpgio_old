@@ -1,5 +1,6 @@
 import { Color, getColor, getTextSize, TextSize } from '../styles/theme';
 import styled, { css } from 'styled-components';
+import * as React from 'react';
 
 type FontWeight = 'regular' | 'medium';
 const fontWeightMap: Record<FontWeight, string> = {
@@ -13,7 +14,7 @@ type Props = {
     weight?: FontWeight;
 }
 
-export const Typography = styled.p<Props>(({
+export const Text: React.FC<Props> = styled.p<Props>(({
     size = 'md',
     color = 'primaryText',
     weight = 'regular'

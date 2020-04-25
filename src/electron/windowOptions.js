@@ -5,6 +5,8 @@ const windowOptions = {
     webPreferences: {
         nodeIntegration: true,
     },
+    minWidth: 640,
+    minHeight: 480,
 };
 
 module.exports = { windowOptions };

@@ -1,20 +1,18 @@
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import { EntitiesPanel } from './EntitiesPanel/EntitiesPanel';
+import { Sidebar } from './Sidebar/Sidebar';
 
 const Container = styled.div`
+    position: relative;
     display: flex;
-    justify-content: stretch;
-    align-content: stretch;
     height: 100%;
+    width: 100%;
 `;
 
-export const Main: React.FC = () => {
-    const { t } = useTranslation();
-
-    return (
-        <Container>
-            { t('general.languageName') }
-        </Container>
-    );
-};
+export const Main: React.FC = () => (
+    <Container>
+        <EntitiesPanel />
+        <Sidebar />
+    </Container>
+);

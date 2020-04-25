@@ -28,7 +28,7 @@ const createWindow = () => {
     }
 };
 
-// App settings and listeners
+// App userData and listeners
 
 app.on('ready', createWindow);
 

@@ -23,7 +23,7 @@ jest.mock('../../../../store/app/app', () => ({
     quit: jest.fn(),
 }));
 
-describe('[UNIT] <Buttons />', () => {
+describe('[UNIT] <buttons />', () => {
     it('should call maximize() if maximize button was clicked', () => {
         const wrapper = mount(
             <Buttons />
@@ -64,7 +64,7 @@ describe('[UNIT] <Buttons />', () => {
     });
 });
 
-describe('[E2E] <Buttons />', () => {
+describe('[E2E] <buttons />', () => {
     jest.dontMock('../../../../electron/electron');
     let app: Application;
 
