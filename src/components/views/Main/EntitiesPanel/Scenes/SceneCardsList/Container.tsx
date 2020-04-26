@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 import { getSize } from '../../../../../shared/styles/theme';
 
-type Props = {
-    width: number;
-}
-
-export const Container = styled.div<Props>`
+export const Container = styled.div`
     position: relative;
     height: 100%;
     will-change: width;
@@ -15,8 +11,9 @@ export const Container = styled.div<Props>`
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     grid-auto-rows: 100%;
     grid-gap: ${getSize('sceneCardSpacing')}px;
+    scroll-snap-type: y mandatory;
 
     @media (min-height: 800px) {
-        grid-auto-rows: calc(50% - ${getSize('sceneCardSpacing')}px);
+        grid-auto-rows: calc(50% - ${getSize('sceneCardSpacing')}px / 2);
     }
 `;

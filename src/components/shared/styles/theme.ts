@@ -12,6 +12,8 @@ export const theme = {
         accent: '#5959C6',
         primaryText: '#868B98',
         secondaryText: '#6B717E',
+        scrollbarTrack: '#00000033',
+        scrollbarThumb: '#868B9866'
     },
     sizes: {
         topBarHeight: 48,

@@ -18,4 +18,6 @@ export const Container: React.FC<Props> = styled.div<Props>(({
     justify-content: stretch;
     align-items: flex-end;
     cursor: pointer;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 `);

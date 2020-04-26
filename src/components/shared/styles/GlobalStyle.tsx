@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import DMSans from '../../../assets/fonts/DMSans-Regular.ttf';
 import DMSansMedium from '../../../assets/fonts/DMSans-Medium.ttf';
+import { getColor } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -28,5 +29,17 @@ export const GlobalStyle = createGlobalStyle`
 
     *, *:before, *:after {
         box-sizing: inherit;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${getColor('scrollbarTrack')};
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${getColor('scrollbarThumb')};
     }
 `;
