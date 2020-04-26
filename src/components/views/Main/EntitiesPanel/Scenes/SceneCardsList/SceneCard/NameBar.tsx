@@ -9,4 +9,5 @@ export const NameBar = styled.div`
     justify-content: flex-start;
     align-items: center;
     background: ${getColor('foregroundDark')};
+    z-index: 1;
 `;

@@ -20,7 +20,6 @@ export const AppName = styled(Text)`
 `;
 
 export const Version = styled(Text)`
-    will-change: all;
     margin-left: 8px;
     opacity: 0.5;
     display: inline;

@@ -3,7 +3,7 @@ import { UserDataState } from './types';
 
 const initialState: UserDataState = {
     ui: {
-        sidebarWidth: 570,
+        sidebarWidth: 300,
     }
 };
 

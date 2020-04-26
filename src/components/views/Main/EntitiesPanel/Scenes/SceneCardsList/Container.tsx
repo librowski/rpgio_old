@@ -4,7 +4,6 @@ import { getSize } from '../../../../../shared/styles/theme';
 export const Container = styled.div`
     position: relative;
     height: 100%;
-    will-change: width;
     width: 100%;
     overflow: auto;
     display: grid;

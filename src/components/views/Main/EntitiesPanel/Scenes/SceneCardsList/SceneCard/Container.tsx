@@ -1,23 +1,14 @@
-import styled, { css } from 'styled-components';
-import * as React from 'react';
+import styled from 'styled-components';
 
-type Props = {
-    imageURL: string;
-    isActive: boolean;
-};
-
-export const Container: React.FC<Props> = styled.div<Props>(({
-    imageURL,
-}) => css`
-    will-change: width;
+export const Container = styled.div`
+    position: relative;
     height: 100%;
     border-radius: 4px;
-    background: url(${imageURL}), center center;
-    background-size: cover;
     display: flex;
     justify-content: stretch;
     align-items: flex-end;
     cursor: pointer;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-`);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+`;

@@ -7,5 +7,4 @@ export const Container = styled.div`
     flex-direction: column;
     height: 100%;
     padding: ${getSize('mainPadding')}px;
-    will-change: width;
 `;

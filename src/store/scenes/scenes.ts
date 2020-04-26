@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ScenesState } from './types';
 import { scenesState } from '../__fake__/scenes';
 
@@ -11,7 +11,9 @@ const scenesSlice = createSlice({
         addScene: state => state,
         removeScene: state => state,
         reorderScene: state => state,
-        playScene: state => state,
+        playScene: (state, action: PayloadAction<string>) => {
+            state.activeSceneName = action.payload;
+        }
     }
 });
 
