@@ -10,8 +10,9 @@ export const theme = {
         foregroundLight: '#1B1B28',
         accentDark: '#33356f',
         accent: '#5959C6',
-        primaryText: '#868B98',
-        secondaryText: '#6B717E',
+        textLight: '#DDDDDD',
+        textPrimary: '#868B98',
+        textSecondary: '#6B717E',
         scrollbarTrack: '#00000033',
         scrollbarThumb: '#868B9866'
     },

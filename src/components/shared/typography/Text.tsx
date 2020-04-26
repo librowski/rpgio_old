@@ -16,7 +16,7 @@ type Props = {
 
 export const Text: React.FC<Props> = styled.p<Props>(({
     size = 'md',
-    color = 'primaryText',
+    color = 'textPrimary',
     weight = 'regular'
 }) => css`
     margin: 0;

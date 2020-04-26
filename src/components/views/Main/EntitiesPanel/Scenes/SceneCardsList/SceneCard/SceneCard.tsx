@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Container } from './Container';
 import { Scene } from '../../../../../../../store/scenes/types';
-import { Text } from '../../../../../../shared/typography/Text';
 import { NameBar } from './NameBar';
 import { playScene } from '../../../../../../../store/scenes/scenes';
 import { useDispatch } from 'react-redux';
@@ -26,9 +25,7 @@ export const SceneCard: React.FC<Props> = ({
     return (
         <Container onClick={onClick} {...rest}>
             <Background imageURL={imageURL} isActive={isActive} />
-            <NameBar>
-                <Text>{ name }</Text>
-            </NameBar>
+            <NameBar isActive={isActive}>{ name }</NameBar>
         </Container>
     );
 }
