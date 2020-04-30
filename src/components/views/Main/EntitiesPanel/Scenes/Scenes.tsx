@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container } from './Container';
-import { SceneCardsList } from './SceneCardsList/SceneCardsList';
+import { SceneCardList } from './SceneCardsList/SceneCardList';
 import { Header } from '../../../../shared/typography/Header';
 
 export const Scenes: React.FC = () => (
@@ -8,6 +8,6 @@ export const Scenes: React.FC = () => (
         <Header>
             Scenes
         </Header>
-        <SceneCardsList />
+        <SceneCardList />
     </Container>
 );

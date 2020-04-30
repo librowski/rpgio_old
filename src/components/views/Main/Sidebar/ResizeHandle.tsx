@@ -9,7 +9,7 @@ const VerticalHandle = styled.div`
     height: 100%;
     width: 5px;
     transform: translateX(-50%);
-    cursor: ew-resize;
+    cursor: col-resize;
 `;
 
 export const ResizeHandle: React.FC = () => {

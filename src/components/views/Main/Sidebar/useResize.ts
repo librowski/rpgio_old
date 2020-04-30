@@ -1,14 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setSidebarWidth } from '../../../../store/userData/userData';
+import {
+    setResizing,
+    setSidebarWidth
+} from '../../../../store/userData/userData';
 import * as React from 'react';
 import * as _ from 'lodash/fp';
-import { sidebarWidthSelector } from '../../../../store/userData/selectors';
 import { useTheme } from 'styled-components';
+import { uiDataSelector } from '../../../../store/userData/selectors';
 
 export const useResize = () => {
     const dispatch = useDispatch();
     const { sizes: { sidebarMinWidth } } = useTheme();
-    const currentSidebarWidth = useSelector(sidebarWidthSelector);
+    const { sidebarWidth: currentSidebarWidth } = useSelector(uiDataSelector);
     const [windowWidth, setWindowWidth] = React.useState(innerWidth);
 
     React.useEffect(() => {
@@ -41,15 +44,15 @@ export const useResize = () => {
 
     const onMouseDown = React.useCallback(() => {
         const onMouseUp = () => {
-            document.body.style.cursor = 'auto';
+            dispatch(setResizing(false));
             document.removeEventListener('mousemove', handleResize);
             document.removeEventListener('mouseup', onMouseUp);
         };
 
-        document.body.style.cursor = 'ew-resize';
+        dispatch(setResizing(true));
         document.addEventListener('mousemove', handleResize);
         document.addEventListener('mouseup', onMouseUp);
-    }, [handleResize]);
+    }, [handleResize, dispatch]);
 
     return {
         onMouseDown,

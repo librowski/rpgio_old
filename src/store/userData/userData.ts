@@ -4,6 +4,8 @@ import { UserDataState } from './types';
 const initialState: UserDataState = {
     ui: {
         sidebarWidth: 300,
+        isDragging: false,
+        isResizing: false,
     }
 };
 
@@ -13,16 +15,26 @@ const userData = createSlice({
     reducers: {
         setSidebarWidth: (state, action: PayloadAction<number>) => {
             state.ui.sidebarWidth = action.payload;
+        },
+        setDragging: (state, action: PayloadAction<boolean>) => {
+            state.ui.isDragging = action.payload;
+        },
+        setResizing: (state, action: PayloadAction<boolean>) => {
+            state.ui.isResizing = action.payload;
         }
     }
 });
 
 const { actions, reducer } = userData;
 const {
-    setSidebarWidth
+    setSidebarWidth,
+    setDragging,
+    setResizing
 } = actions;
 
 export {
     reducer as userDataReducer,
-    setSidebarWidth
+    setSidebarWidth,
+    setDragging,
+    setResizing
 };

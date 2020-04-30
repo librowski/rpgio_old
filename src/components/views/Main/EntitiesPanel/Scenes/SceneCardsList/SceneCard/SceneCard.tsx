@@ -5,15 +5,17 @@ import { NameBar } from './NameBar';
 import { playScene } from '../../../../../../../store/scenes/scenes';
 import { useDispatch } from 'react-redux';
 import { Background } from './Background';
+import { SortableElement } from 'react-sortable-hoc';
 
 type Props =
     & React.ComponentProps<typeof Background>
     & Scene;
 
-export const SceneCard: React.FC<Props> = ({
+const SceneCard: React.FC<Props> = ({
     name,
     isActive,
     imageURL,
+    isDragging,
     ...rest
 }) => {
     const dispatch = useDispatch();
@@ -24,8 +26,15 @@ export const SceneCard: React.FC<Props> = ({
 
     return (
         <Container onClick={onClick} {...rest}>
-            <Background imageURL={imageURL} isActive={isActive} />
+            <Background
+                isDragging={isDragging}
+                imageURL={imageURL}
+                isActive={isActive}
+            />
             <NameBar isActive={isActive}>{ name }</NameBar>
         </Container>
     );
 }
+
+const SortableSceneCard = SortableElement(SceneCard);
+export { SortableSceneCard as SceneCard };

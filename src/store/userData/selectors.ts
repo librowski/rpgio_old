@@ -1,7 +1,5 @@
 import { RootState } from '../store';
 
-export const sidebarWidthSelector = ({ userData }: RootState) =>
-    userData.ui.sidebarWidth;
+export const uiDataSelector = ({ userData }: RootState) =>
+    userData.ui;
 
-export const entitiesPanelWidthSelector = ({ userData }: RootState) =>
-    window.innerWidth - userData.ui.sidebarWidth;
