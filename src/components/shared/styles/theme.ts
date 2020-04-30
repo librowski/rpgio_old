@@ -21,6 +21,7 @@ export const theme = {
         mainPadding: 32,
         sceneCardSpacing: 10,
         sceneNameBarHeight: 32,
+        sidebarMinWidth: 320,
     },
     textSizes: {
         xl: 24,

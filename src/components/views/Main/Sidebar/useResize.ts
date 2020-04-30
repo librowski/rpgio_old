@@ -3,9 +3,11 @@ import { setSidebarWidth } from '../../../../store/userData/userData';
 import * as React from 'react';
 import * as _ from 'lodash/fp';
 import { sidebarWidthSelector } from '../../../../store/userData/selectors';
+import { useTheme } from 'styled-components';
 
 export const useResize = () => {
     const dispatch = useDispatch();
+    const { sizes: { sidebarMinWidth } } = useTheme();
     const currentSidebarWidth = useSelector(sidebarWidthSelector);
     const [windowWidth, setWindowWidth] = React.useState(innerWidth);
 
@@ -13,6 +15,7 @@ export const useResize = () => {
         const handleWindowResize = () => {
             setWindowWidth(innerWidth);
             const maxSidebarWidth = innerWidth / 2;
+
             if (currentSidebarWidth > maxSidebarWidth) {
                 dispatch(setSidebarWidth(maxSidebarWidth));
             }
@@ -25,9 +28,13 @@ export const useResize = () => {
     const handleResize = React.useCallback(_.throttle(
         30,
         ({ clientX }: MouseEvent) => {
-            const sidebarWidth = windowWidth - clientX;
-            if (sidebarWidth <= windowWidth / 2) {
-                dispatch(setSidebarWidth(sidebarWidth));
+            const newSidebarWidth = windowWidth - clientX;
+            const halfWindowWidth = windowWidth / 2;
+
+            if (_.inRange(sidebarMinWidth, halfWindowWidth, newSidebarWidth)) {
+                dispatch(setSidebarWidth(newSidebarWidth));
+            } else if (newSidebarWidth > halfWindowWidth) {
+                dispatch(setSidebarWidth(halfWindowWidth));
             }
         },
     ), [dispatch, windowWidth]);

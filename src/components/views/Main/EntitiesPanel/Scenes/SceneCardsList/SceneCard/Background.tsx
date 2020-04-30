@@ -16,7 +16,7 @@ export const Background: React.FC<Props> = styled.div<Props>(({
     width: 100%;
     height: 100%;
     transition: 300ms ease opacity;
-    opacity: ${isActive ? 1 : 0.3};
+    opacity: ${isActive ? 1 : 0.2};
     background: url(${imageURL}), center center;
     background-size: cover;
 `);
