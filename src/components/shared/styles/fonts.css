@@ -1,0 +1,16 @@
+/*
+    Putting a font-face inside createGlobalStyle has been causing flickering whenever application state changed.
+    https://github.com/styled-components/styled-components/issues/1593
+*/
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../../../assets/fonts/DMSans-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../../../assets/fonts/DMSans-Medium.ttf');
+    font-weight: 500;
+}
