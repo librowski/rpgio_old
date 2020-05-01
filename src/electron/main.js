@@ -20,6 +20,7 @@ const createWindow = () => {
         });
 
     mainWindow.loadURL(startUrl);
+    mainWindow.once('ready-to-show', () => mainWindow.show());
     mainWindow.on('closed', () => (mainWindow = null));
 
     if (isDev()) {
