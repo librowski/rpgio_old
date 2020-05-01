@@ -9,7 +9,7 @@
     "scripts": {
         "dev": "NODE_ENV=development webpack --watch --config webpack.config.js --mode=development & electron ./src/electron/main.js",
         "dist": "NODE_ENV=production webpack --config webpack.config.js && electron-builder -p never",
-        "lint:strict": "eslint . --ext .js,.ts,.tsx --max-warnings 0",
+        "lint": "eslint . --ext .js,.ts,.tsx --max-warnings 0",
         "lint:fix": "eslint . --ext .ts,.tsx --fix",
         "test": "NODE_ENV=test jest",
         "test:unit": "yarn test -t=\"\\[UNIT\\]\"",
@@ -36,6 +36,7 @@
         "react-i18next": "^11.3.4",
         "react-redux": "^7.2.0",
         "react-router-dom": "^5.1.2",
+        "react-sortable-hoc": "^1.11.0",
         "styled-components": "^5.1.0"
     },
     "devDependencies": {
@@ -87,8 +88,8 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn lint:strict && yarn test",
-            "pre-push": "yarn lint:strict && yarn test"
+            "pre-commit": "yarn lint && yarn test",
+            "pre-push": "yarn lint && yarn test"
         }
     },
     "build": {

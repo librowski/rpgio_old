@@ -1,10 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { getColor, getSize } from '../../styles/theme';
+import { getColor, getSize, getZIndex } from '../../styles/theme';
 import { Title } from './Title';
 import { Buttons } from './Buttons';
 
 const Container = styled.div`
+    z-index: ${getZIndex('topBar')};
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
@@ -27,4 +28,3 @@ export const TopBar: React.FC = () => (
         <Buttons />
     </Container>
 );
-

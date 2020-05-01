@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Typography } from '../../Typography/Typography';
+import { Text } from '../../typography/Text';
 import { useSelector } from 'react-redux';
 import { appInfoSelector } from '../../../../store/app/selectors';
 
@@ -10,7 +10,7 @@ const Container = styled.div`
     align-items: center;
 `;
 
-export const AppName = styled(Typography)`
+export const AppName = styled(Text)`
     cursor: pointer;
     transition: 100ms ease filter;
 
@@ -19,12 +19,21 @@ export const AppName = styled(Typography)`
     }
 `;
 
-export const Version = styled(Typography)`
+export const Version = styled(Text)`
     margin-left: 8px;
     opacity: 0.5;
+    display: inline;
 `;
 
 export const versionTestId = 'versionTestId';
+
+/*
+    A work-around used due to wrong styled-components typings
+    https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30117
+ */
+const asPropObject: Partial<React.ComponentProps<typeof Version>> = {
+    as: 'span',
+};
 
 export const Title: React.FC = () => {
     const { name, version } = useSelector(appInfoSelector);
@@ -32,7 +41,11 @@ export const Title: React.FC = () => {
         <Container>
             <AppName color={'accent'} weight={'medium'} size={'lg'}>
                 { name }
-                <Version as={'span'} size={'sm'} data-test-id={versionTestId}>
+                <Version
+                    {...asPropObject}
+                    size={'sm'}
+                    data-test-id={versionTestId}
+                >
                     v{ version }
                 </Version>
             </AppName>

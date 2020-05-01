@@ -1,4 +1,4 @@
-import { Buttons, maximizeButtonTestId, minimizeButtonTestId } from './Buttons';
+import { Buttons, maximizeButtonTestId } from './Buttons';
 import React from 'react';
 import { mount } from '../../../../test/enzyme';
 import { maximize, minimize, quit } from '../../../../store/app/app';
@@ -23,7 +23,7 @@ jest.mock('../../../../store/app/app', () => ({
     quit: jest.fn(),
 }));
 
-describe('[UNIT] <Buttons />', () => {
+describe('[UNIT] <buttons />', () => {
     it('should call maximize() if maximize button was clicked', () => {
         const wrapper = mount(
             <Buttons />
@@ -64,7 +64,7 @@ describe('[UNIT] <Buttons />', () => {
     });
 });
 
-describe('[E2E] <Buttons />', () => {
+describe('[E2E] <buttons />', () => {
     jest.dontMock('../../../../electron/electron');
     let app: Application;
 
@@ -74,16 +74,6 @@ describe('[E2E] <Buttons />', () => {
     });
 
     afterEach(async () => teardown(app));
-
-    it('should minimize window when minimize button was clicked', async () => {
-        const minimizeButton = getByTestId(app, minimizeButtonTestId);
-        await minimizeButton.click();
-
-        const isMinimized = await app.browserWindow.isMinimized();
-        expect(isMinimized)
-            .toBe(true);
-    });
-
 
     it('should maximize window when maximize button was clicked', async () => {
         const maximizeButton = getByTestId(app, maximizeButtonTestId);

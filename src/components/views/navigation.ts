@@ -1,1 +1,1 @@
-export const SETTINGS_PATH = '/settings';
+export const SETTINGS_PATH = '/userData';

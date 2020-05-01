@@ -1,18 +1,18 @@
 import * as React from 'react';
-import { Typography } from './Typography';
+import { Text } from './Text';
 import { mount } from '../../../test/enzyme';
 import { theme } from '../styles/theme';
 
-describe('<Typography />', () => {
+describe('<Text />', () => {
     it('should pass appropriate styles', () => {
-        const props: React.ComponentProps<typeof Typography> = {
+        const props: React.ComponentProps<typeof Text> = {
             color: 'background',
             size: 'xs',
             weight: 'medium'
         };
 
         const wrapper = mount(
-            <Typography {...props} />
+            <Text {...props} />
         );
 
         expect(wrapper).

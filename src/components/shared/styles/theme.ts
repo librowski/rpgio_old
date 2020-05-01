@@ -10,11 +10,18 @@ export const theme = {
         foregroundLight: '#1B1B28',
         accentDark: '#33356f',
         accent: '#5959C6',
-        primaryText: '#868B98',
-        secondaryText: '#6B717E',
+        textLight: '#DDDDDD',
+        textPrimary: '#868B98',
+        textSecondary: '#6B717E',
+        scrollbarTrack: '#00000033',
+        scrollbarThumb: '#868B9866'
     },
     sizes: {
         topBarHeight: 48,
+        mainPadding: 32,
+        sceneCardSpacing: 10,
+        sceneNameBarHeight: 32,
+        sidebarMinWidth: 320,
     },
     textSizes: {
         xl: 24,
@@ -27,6 +34,7 @@ export const theme = {
         content: 100,
         overlay: 200,
         fab: 300,
+        topBar: 400,
     }
 };
 

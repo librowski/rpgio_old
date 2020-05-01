@@ -1,20 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
-import DMSans from '../../../assets/fonts/DMSans-Regular.ttf';
-import DMSansMedium from '../../../assets/fonts/DMSans-Medium.ttf';
+import { createGlobalStyle, css } from 'styled-components';
+import { getColor } from './theme';
+import './fonts.css';
+import { UserDataState } from '../../../store/userData/types';
 
-export const GlobalStyle = createGlobalStyle`
-    @font-face {
-        font-family: 'DM Sans';
-        src: url(${DMSans});
-        font-weight: normal;
-    }
+type Props = UserDataState['ui'];
 
-    @font-face {
-        font-family: 'DM Sans';
-        src: url(${DMSansMedium});
-        font-weight: 500;
-    }
-
+export const GlobalStyle = createGlobalStyle<Props>(({
+    isDragging,
+    isResizing,
+}) => css`
     html, body, #root {
         margin: 0;
         padding: 0;
@@ -28,5 +22,19 @@ export const GlobalStyle = createGlobalStyle`
 
     *, *:before, *:after {
         box-sizing: inherit;
+        ${isDragging && 'cursor: grabbing !important'};
+        ${isResizing && 'cursor: col-resize !important'};
     }
-`;
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: ${getColor('scrollbarTrack')};
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${getColor('scrollbarThumb')};
+    }
+`);

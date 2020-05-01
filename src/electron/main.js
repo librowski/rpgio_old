@@ -20,6 +20,7 @@ const createWindow = () => {
         });
 
     mainWindow.loadURL(startUrl);
+    mainWindow.once('ready-to-show', () => mainWindow.show());
     mainWindow.on('closed', () => (mainWindow = null));
 
     if (isDev()) {
@@ -28,7 +29,7 @@ const createWindow = () => {
     }
 };
 
-// App settings and listeners
+// App userData and listeners
 
 app.on('ready', createWindow);
 
