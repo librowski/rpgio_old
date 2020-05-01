@@ -19,7 +19,10 @@ const scenesSlice = createSlice({
         },
         playScene: (state, action: PayloadAction<string>) => {
             state.activeSceneName = action.payload;
-        }
+        },
+        pauseActiveScene: (state) => {
+            state.activeSceneName = null;
+        },
     }
 });
 
@@ -29,6 +32,7 @@ const {
     removeScene,
     reorderScene,
     playScene,
+    pauseActiveScene,
 } = actions;
 
 export {
@@ -37,4 +41,5 @@ export {
     removeScene,
     reorderScene,
     playScene,
+    pauseActiveScene,
 };

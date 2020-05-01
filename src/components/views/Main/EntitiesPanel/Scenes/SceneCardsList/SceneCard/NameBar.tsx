@@ -15,13 +15,14 @@ const Container = styled.div`
     z-index: 1;
 `;
 
-const Name = styled(Text)`
+export const Name = styled(Text)`
     transition: 300ms ease color;
 `;
 
 type Props = {
     isActive: boolean;
 };
+
 export const NameBar: React.FC<Props> = ({ isActive, children }) => (
     <Container>
         <Name color={isActive ? 'textLight' : 'textPrimary'}>

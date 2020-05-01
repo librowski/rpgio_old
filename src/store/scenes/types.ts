@@ -5,5 +5,5 @@ export type Scene = {
 
 export type ScenesState = {
     scenes: Scene[];
-    activeSceneName: string;
+    activeSceneName?: string;
 }

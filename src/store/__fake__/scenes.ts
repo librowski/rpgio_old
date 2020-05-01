@@ -30,5 +30,4 @@ const scenes: Scene[] = [
 
 export const scenesState: ScenesState = {
     scenes,
-    activeSceneName: 'Space',
 }

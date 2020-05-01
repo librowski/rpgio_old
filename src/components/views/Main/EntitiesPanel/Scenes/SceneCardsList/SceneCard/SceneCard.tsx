@@ -2,7 +2,10 @@ import * as React from 'react';
 import { Container } from './Container';
 import { Scene } from '../../../../../../../store/scenes/types';
 import { NameBar } from './NameBar';
-import { playScene } from '../../../../../../../store/scenes/scenes';
+import {
+    pauseActiveScene,
+    playScene
+} from '../../../../../../../store/scenes/scenes';
 import { useDispatch } from 'react-redux';
 import { Background } from './Background';
 import { SortableElement } from 'react-sortable-hoc';
@@ -20,8 +23,14 @@ const SceneCard: React.FC<Props> = ({
 }) => {
     const dispatch = useDispatch();
     const onClick = React.useCallback(
-        () => dispatch(playScene(name)),
-        [name, dispatch]
+        () => {
+            if (!isActive) {
+                dispatch(playScene(name))
+            } else {
+                dispatch(pauseActiveScene());
+            }
+        },
+        [isActive, dispatch, name]
     );
 
     return (
