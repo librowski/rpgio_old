@@ -15,7 +15,7 @@ jobs:
     - name: Lint
       run: |
         yarn install
-        yarn lint:strict
+        yarn lint
     
     - name: Test & Upload codecov
       run: |
