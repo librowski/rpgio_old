@@ -11,7 +11,7 @@ import { reorderScene } from '../../../../../../store/scenes/scenes';
 import { setDragging } from '../../../../../../store/userData/userData';
 import { uiDataSelector } from '../../../../../../store/userData/selectors';
 
-const SortableSceneCardContainer = SortableContainer(() => {
+const SortableCardsContainer = SortableContainer(() => {
     const scenes = useSelector(scenesSelector);
     const activeSceneName = useSelector(activeSceneNameSelector);
     const { isDragging } = useSelector(uiDataSelector);
@@ -48,7 +48,7 @@ export const SceneCardList: React.FC = () => {
     );
 
     return (
-        <SortableSceneCardContainer
+        <SortableCardsContainer
             axis={'xy'}
             pressDelay={100}
             onSortStart={onSortStart}

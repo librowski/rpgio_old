@@ -8,6 +8,7 @@ export const theme = {
         foregroundDark: '#090D10',
         foreground: '#14141D',
         foregroundLight: '#1B1B28',
+        accentDarkest: '#00023C',
         accentDark: '#33356f',
         accent: '#5959C6',
         textLight: '#DDDDDD',

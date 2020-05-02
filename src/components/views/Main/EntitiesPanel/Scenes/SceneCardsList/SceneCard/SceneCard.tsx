@@ -14,11 +14,10 @@ type Props =
     & React.ComponentProps<typeof Background>
     & Scene;
 
-const SceneCard: React.FC<Props> = ({
+const Card: React.FC<Props> = ({
     name,
     isActive,
     imageURL,
-    isDragging,
     ...rest
 }) => {
     const dispatch = useDispatch();
@@ -34,9 +33,8 @@ const SceneCard: React.FC<Props> = ({
     );
 
     return (
-        <Container onClick={onClick} {...rest}>
+        <Container isActive={isActive} onClick={onClick} {...rest}>
             <Background
-                isDragging={isDragging}
                 imageURL={imageURL}
                 isActive={isActive}
             />
@@ -45,5 +43,4 @@ const SceneCard: React.FC<Props> = ({
     );
 }
 
-const SortableSceneCard = SortableElement(SceneCard);
-export { SortableSceneCard as SceneCard };
+export const SceneCard = SortableElement(Card);
