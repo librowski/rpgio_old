@@ -25,7 +25,7 @@ type Props = {
 
 export const NameBar: React.FC<Props> = ({ isActive, children }) => (
     <Container>
-        <Name color={isActive ? 'textLight' : 'textPrimary'}>
+        <Name size='lg' color={isActive ? 'textLight' : 'textPrimary'}>
             { children }
         </Name>
     </Container>

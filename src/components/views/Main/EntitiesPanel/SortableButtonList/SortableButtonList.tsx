@@ -14,8 +14,8 @@ import {
 
 type Props = {
     collection: SortableCollection;
-    handleSortStart: SortStartHandler;
-    handleSortEnd: SortEndHandler;
+    handleSortStart?: SortStartHandler;
+    handleSortEnd?: SortEndHandler;
 };
 
 const SortableList = SortableContainer(
@@ -34,18 +34,17 @@ const SortableList = SortableContainer(
 
 export const SortableButtonList: React.FC<Props> = ({
     collection,
-    handleSortStart,
-    handleSortEnd,
+    ...rest
 }) => {
     const dispatch = useDispatch();
 
     const onSortStart: SortStartHandler = (...sortStartParams) => {
-        handleSortStart(...sortStartParams);
+        rest?.handleSortStart(...sortStartParams);
         dispatch(setDragging(true));
     };
 
     const onSortEnd: SortEndHandler = (...sortEndParams) => {
-        handleSortEnd(...sortEndParams);
+        rest?.handleSortEnd(...sortEndParams);
         dispatch(setDragging(false));
     };
 

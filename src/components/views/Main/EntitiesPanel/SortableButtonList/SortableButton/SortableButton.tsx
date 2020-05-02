@@ -19,11 +19,11 @@ const Name = styled(Text)`
     white-space: nowrap;
 `;
 
-const Button: React.FC<Props> = ({ name, onClick, ...rest }) => {
+const Button: React.FC<Props> = ({ name,...rest }) => {
     const { isDragging } = useSelector(uiDataSelector);
 
     return (
-        <Container isDragging={isDragging} onClick={onClick} {...rest}>
+        <Container isDragging={isDragging} {...rest}>
             <Background />
             <Name size='lg'>
                 { name }

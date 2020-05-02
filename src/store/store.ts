@@ -3,9 +3,11 @@ import { appReducer } from './app/app';
 import { soundsReducer } from './sounds/sounds';
 import { scenesReducer } from './scenes/scenes';
 import { userDataReducer } from './userData/userData';
+import { actionsReducer } from './actions/actions';
 
 const rootReducer = combineReducers({
     sounds: soundsReducer,
+    actions: actionsReducer,
     scenes: scenesReducer,
     app: appReducer,
     userData: userDataReducer,
