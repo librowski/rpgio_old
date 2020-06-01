@@ -11,6 +11,7 @@ export const Container = styled.div<Props>(({
     isDragging,
 }) => css`
     position: relative;
+    overflow: hidden;
     border-radius: 4px;
     display: flex;
     justify-content: stretch;

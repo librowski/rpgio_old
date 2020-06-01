@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
-import { getColor } from './theme';
 import './fonts.css';
 import { UserDataState } from '../../../store/userData/types';
+import { scrollbarStyles } from './scrollbar';
 
 type Props = UserDataState['ui'];
 
@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle<Props>(({
     isDragging,
     isResizing,
 }) => css`
+    ${scrollbarStyles};
     html, body, #root {
         margin: 0;
         padding: 0;
@@ -24,17 +25,5 @@ export const GlobalStyle = createGlobalStyle<Props>(({
         box-sizing: inherit;
         ${isDragging && 'cursor: grabbing !important'};
         ${isResizing && 'cursor: col-resize !important'};
-    }
-
-    ::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: ${getColor('scrollbarTrack')};
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: ${getColor('scrollbarThumb')};
     }
 `);
