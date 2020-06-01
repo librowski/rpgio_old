@@ -28,7 +28,7 @@ jest.mock('lodash', () => ({
     inRange: () => true,
 }));
 
-describe('[UNIT] <ResizeHandle />', () => {
+describe('<ResizeHandle />', () => {
     it('should start resizing on mouse down', () => {
         toMock(uiDataSelector).mockReturnValue({
             sidebarWidth: 100,

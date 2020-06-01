@@ -23,7 +23,7 @@ jest.mock('../../../../../../../store/scenes/scenes', () => ({
     playScene: jest.fn(),
 }));
 
-describe('[UNIT] <SceneCard />', () => {
+describe('<SceneCard />', () => {
     const sceneCardProps: React.ComponentProps<typeof SceneCard> = {
         name: 'Scene',
         isDragging: false,

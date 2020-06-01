@@ -9,7 +9,7 @@ jest.mock('../../../../electron/electron', () => ({
     }
 }));
 
-describe('[UNIT] <TopBar />', () => {
+describe('<TopBar />', () => {
     it('should contain a <Title /> component', () => {
         const wrapper = mount(
             <TopBar />

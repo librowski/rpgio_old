@@ -25,7 +25,7 @@ jest.mock('../../../../../../store/userData/selectors', () => ({
     uiDataSelector: jest.fn(),
 }));
 
-describe('[UNIT] <SceneCardList />', () => {
+describe('<SceneCardList />', () => {
     it('should render <SceneCard /> using scenes data from store', () => {
         const fakeScenes: Scene[] = [
             { name: 'Horror', imageURL: '' },

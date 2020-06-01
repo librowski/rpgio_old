@@ -13,7 +13,7 @@ jest.mock('../../../../store/userData/selectors', () => ({
     uiDataSelector: jest.fn(),
 }));
 
-describe('[UNIT] <Sidebar />', () => {
+describe('<Sidebar />', () => {
     it('should have width provided from store', () => {
         toMock(uiDataSelector).mockReturnValue({
             isResizing: false,

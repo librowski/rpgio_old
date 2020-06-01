@@ -23,7 +23,7 @@ jest.mock('../../../../store/app/app', () => ({
     quit: jest.fn(),
 }));
 
-describe('[UNIT] <buttons />', () => {
+describe('<buttons />', () => {
     it('should call maximize() if maximize button was clicked', () => {
         const wrapper = mount(
             <Buttons />

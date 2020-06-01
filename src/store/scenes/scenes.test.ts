@@ -6,7 +6,7 @@ import {
     scenesReducer
 } from './scenes';
 
-describe('[UNIT] scenesReducer()', () => {
+describe('scenesReducer()', () => {
     it('should set active scene', () => {
         const state: ScenesState = {
             scenes: [],

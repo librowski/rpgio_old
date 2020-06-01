@@ -10,7 +10,7 @@ jest.mock('../../../../store/app/selectors', () => ({
 
 jest.mock('../../../../electron/electron');
 
-describe('[UNIT] <Title />', () => {
+describe('<Title />', () => {
     it('should contain app title and version information', async () => {
         toMock(appInfoSelector).mockReturnValue({
             name: 'rpgio',

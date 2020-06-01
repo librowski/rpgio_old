@@ -2,7 +2,7 @@ import { Background } from './Background';
 import React from 'react';
 import { mount } from '../../../../../../../test/enzyme';
 
-describe('[UNIT] <Background />', () => {
+describe('<Background />', () => {
     it('should have 20% opacity if the card isn\'t active', () => {
         const wrapper = mount(
             <Background imageURL={''} isDragging={false} isActive={false} />
