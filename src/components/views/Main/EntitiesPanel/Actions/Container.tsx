@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getSize } from '../../../../shared/styles/theme';
+import { getSize } from '@components/shared/styles/theme';
 
 export const Container = styled.div`
     position: relative;

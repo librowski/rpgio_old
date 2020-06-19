@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { Text } from '../../typography/Text';
 import { useSelector } from 'react-redux';
-import { appInfoSelector } from '../../../../store/app/selectors';
+import { appInfoSelector } from '@store/app/selectors';
 
 const Container = styled.div`
     display: flex;

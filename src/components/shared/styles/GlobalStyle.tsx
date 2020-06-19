@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 import './fonts.css';
-import { UserDataState } from '../../../store/userData/types';
+import { UserDataState } from '@store/userData/types';
 import { scrollbarStyles } from './scrollbar';
 
 type Props = UserDataState['ui'];

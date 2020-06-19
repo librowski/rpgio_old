@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { getColor, getSize } from '../../../../../../shared/styles/theme';
+import { getColor, getSize } from '@components/shared/styles/theme';
 import * as React from 'react';
-import { Text } from '../../../../../../shared/typography/Text';
+import { Text } from '@components/shared/typography/Text';
 
 const Container = styled.div`
     transition: 300ms ease background;

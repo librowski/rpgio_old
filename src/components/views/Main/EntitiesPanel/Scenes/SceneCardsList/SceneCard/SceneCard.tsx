@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Container } from './Container';
-import { Scene } from '../../../../../../../store/scenes/types';
+import { Scene } from '@store/scenes/types';
 import { NameBar } from './NameBar';
 import {
     pauseActiveScene,
     playScene
-} from '../../../../../../../store/scenes/scenes';
+} from '@store/scenes/scenes';
 import { useDispatch } from 'react-redux';
 import { Background } from './Background';
 import { SortableElement } from 'react-sortable-hoc';

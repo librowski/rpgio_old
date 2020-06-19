@@ -4,9 +4,9 @@ import { SortableButtonList, } from '../SortableButtonList/SortableButtonList';
 import * as _ from 'lodash/fp';
 import { Header } from '../../../../shared/typography/Header';
 import { useDispatch, useSelector } from 'react-redux';
-import { soundsSelector } from '../../../../../store/sounds/selectors';
-import { playSound, reorderSound } from '../../../../../store/sounds/sounds';
-import { Sound } from '../../../../../store/sounds/types';
+import { soundsSelector } from '@store/sounds/selectors';
+import { playSound, reorderSound } from '@store/sounds/sounds';
+import { Sound } from '@store/sounds/types';
 import { SortEnd } from 'react-sortable-hoc';
 
 export const Sounds: React.FC = () => {

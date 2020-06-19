@@ -55,6 +55,14 @@ const config = {
         ]
     },
     resolve: {
+        alias: {
+            '@assets': path.resolve(__dirname, 'src/assets/'),
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@electron': path.resolve(__dirname, 'src/electron/'),
+            '@i18n': path.resolve(__dirname, 'src/i18n/'),
+            '@store': path.resolve(__dirname, 'src/store/'),
+            '@test': path.resolve(__dirname, 'src/test/'),
+        },
         extensions: ['.tsx', '.ts', '.js']
     },
     output: {

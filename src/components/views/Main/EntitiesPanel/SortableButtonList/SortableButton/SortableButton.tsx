@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Container } from './Container';
-import { Text } from '../../../../../shared/typography/Text';
+import { Text } from '@components/shared/typography/Text';
 import { SortableElement } from 'react-sortable-hoc';
 import { Background } from './Background';
 import { useSelector } from 'react-redux';
-import { uiDataSelector } from '../../../../../../store/userData/selectors';
+import { uiDataSelector } from '@store/userData/selectors';
 import styled from 'styled-components';
 
 export type SortableCollection = Props[];

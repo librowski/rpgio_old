@@ -5,7 +5,7 @@ import {
     SortStartHandler
 } from 'react-sortable-hoc';
 import { Container } from './Container';
-import { setDragging } from '../../../../../store/userData/userData';
+import { setDragging } from '@store/userData/userData';
 import { useDispatch } from 'react-redux';
 import {
     SortableButton,

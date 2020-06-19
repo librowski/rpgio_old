@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getColor } from '../../../../../shared/styles/theme';
+import { getColor } from '@components/shared/styles/theme';
 
 export const Background = styled.div`
     z-index: 0;

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { mount as enzymeMount, shallow as enzymeShallow } from 'enzyme';
-import { Provider } from '../components/providers/Provider';
+import { MockProvider } from '@test/MockProvider';
 
 const mockOptions = {
-    wrappingComponent: Provider,
+    wrappingComponent: MockProvider,
 };
 
 export const mount: typeof enzymeMount = (node: React.ReactElement) =>

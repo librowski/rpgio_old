@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Container } from './Container';
 import { SceneCardList } from './SceneCardsList/SceneCardList';
-import { Header } from '../../../../shared/typography/Header';
+import { Header } from '@components/shared/typography/Header';
 
 export const Scenes: React.FC = () => (
     <Container>

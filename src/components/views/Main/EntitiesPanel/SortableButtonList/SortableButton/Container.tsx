@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { getColor } from '../../../../../shared/styles/theme';
+import { getColor } from '@components/shared/styles/theme';
 import { Background } from './Background';
 
 type Props = {

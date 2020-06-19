@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text } from './Text';
-import { mount } from '../../../test/enzyme';
+import { mount } from '@test/enzyme';
 import { theme } from '../styles/theme';
 
 describe('<Text />', () => {

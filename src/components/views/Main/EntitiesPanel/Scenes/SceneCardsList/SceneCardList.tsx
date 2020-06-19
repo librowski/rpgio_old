@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
     activeSceneNameSelector,
     scenesSelector
-} from '../../../../../../store/scenes/selectors';
+} from '@store/scenes/selectors';
 import { Container } from './Container';
 import { SceneCard } from './SceneCard/SceneCard';
 import { SortableContainer, SortEndHandler } from 'react-sortable-hoc';
-import { reorderScene } from '../../../../../../store/scenes/scenes';
-import { setDragging } from '../../../../../../store/userData/userData';
-import { uiDataSelector } from '../../../../../../store/userData/selectors';
+import { reorderScene } from '@store/scenes/scenes';
+import { setDragging } from '@store/userData/userData';
+import { uiDataSelector } from '@store/userData/selectors';
 
 const SortableCardsContainer = SortableContainer(() => {
     const scenes = useSelector(scenesSelector);

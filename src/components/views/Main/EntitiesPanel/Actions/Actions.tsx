@@ -5,12 +5,12 @@ import * as _ from 'lodash/fp';
 import { Header } from '../../../../shared/typography/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import { SortEnd } from 'react-sortable-hoc';
-import { actionsSelector } from '../../../../../store/actions/selectors';
-import { Action } from '../../../../../store/actions/types';
+import { actionsSelector } from '@store/actions/selectors';
+import { Action } from '@store/actions/types';
 import {
     performAction,
     reorderAction
-} from '../../../../../store/actions/actions';
+} from '@store/actions/actions';
 
 export const Actions: React.FC = () => {
     const dispatch = useDispatch();
