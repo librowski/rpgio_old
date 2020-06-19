@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { getColor, getSize } from '../../../../../../shared/styles/theme';
+import { getColor, getSize } from '@components/shared/styles/theme';
 import * as React from 'react';
-import { Text } from '../../../../../../shared/typography/Text';
+import { Text } from '@components/shared/typography/Text';
 
 const Container = styled.div`
     transition: 300ms ease background;
@@ -25,7 +25,7 @@ type Props = {
 
 export const NameBar: React.FC<Props> = ({ isActive, children }) => (
     <Container>
-        <Name color={isActive ? 'textLight' : 'textPrimary'}>
+        <Name size='lg' color={isActive ? 'textLight' : 'textPrimary'}>
             { children }
         </Name>
     </Container>

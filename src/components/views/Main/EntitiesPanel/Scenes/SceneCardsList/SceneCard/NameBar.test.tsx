@@ -1,8 +1,8 @@
 import { Name, NameBar } from './NameBar';
 import React from 'react';
-import { mount } from '../../../../../../../test/enzyme';
+import { mount } from '@test/enzyme';
 
-describe('[UNIT] <NameBar />', () => {
+describe('<NameBar />', () => {
     it('should has textLight color if is active', () => {
         const wrapper = mount(
             <NameBar isActive={true} />

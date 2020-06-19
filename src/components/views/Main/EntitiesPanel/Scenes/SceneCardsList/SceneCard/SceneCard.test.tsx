@@ -1,10 +1,10 @@
 import { SceneCard } from './SceneCard';
 import React from 'react';
-import { mount } from '../../../../../../../test/enzyme';
+import { mount } from '@test/enzyme';
 import {
     pauseActiveScene,
     playScene
-} from '../../../../../../../store/scenes/scenes';
+} from '@store/scenes/scenes';
 
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
@@ -23,7 +23,7 @@ jest.mock('../../../../../../../store/scenes/scenes', () => ({
     playScene: jest.fn(),
 }));
 
-describe('[UNIT] <SceneCard />', () => {
+describe('<SceneCard />', () => {
     const sceneCardProps: React.ComponentProps<typeof SceneCard> = {
         name: 'Scene',
         isDragging: false,

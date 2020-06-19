@@ -8,19 +8,20 @@ export const theme = {
         foregroundDark: '#090D10',
         foreground: '#14141D',
         foregroundLight: '#1B1B28',
+        accentDarkest: '#00023C',
         accentDark: '#33356f',
         accent: '#5959C6',
         textLight: '#DDDDDD',
         textPrimary: '#868B98',
         textSecondary: '#6B717E',
         scrollbarTrack: '#00000033',
-        scrollbarThumb: '#868B9866'
+        scrollbarThumb: '#667B8866'
     },
     sizes: {
         topBarHeight: 48,
         mainPadding: 32,
         sceneCardSpacing: 10,
-        sceneNameBarHeight: 32,
+        sceneNameBarHeight: 36,
         sidebarMinWidth: 320,
     },
     textSizes: {

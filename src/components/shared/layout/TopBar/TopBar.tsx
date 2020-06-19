@@ -11,7 +11,7 @@ const Container = styled.div`
     padding: 0 16px;
     align-items: center;
     width: 100%;
-    height: ${getSize('topBarHeight')}px;
+    min-height: ${getSize('topBarHeight')}px;
     background: ${getColor('foregroundDark')};
     -webkit-app-region: drag;
 

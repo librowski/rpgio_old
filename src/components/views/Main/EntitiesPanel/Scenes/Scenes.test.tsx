@@ -1,9 +1,9 @@
 import { Scenes } from './Scenes';
 import React from 'react';
-import { mount } from '../../../../../test/enzyme';
+import { mount } from '@test/enzyme';
 import { SceneCardList } from './SceneCardsList/SceneCardList';
 
-describe('[UNIT] <Scenes />', () => {
+describe('<Scenes />', () => {
     it('should render <SceneCardList />', () => {
         const wrapper = mount(
             <Scenes />

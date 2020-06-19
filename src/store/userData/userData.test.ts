@@ -6,7 +6,7 @@ import {
     userDataReducer
 } from './userData';
 
-describe('[UNIT] userDataReducer()', () => {
+describe('userDataReducer()', () => {
     it('should set sidebar width', () => {
         const initialState: UserDataState = {
             ui: {

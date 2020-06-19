@@ -1,4 +1,4 @@
-type UIState = {
+export type UIState = {
     sidebarWidth: number;
     isDragging: boolean;
     isResizing: boolean;

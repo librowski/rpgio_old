@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from '../../../../test/enzyme';
 import { X } from 'react-feather';
 
-describe('[UNIT] <IconButton />', () => {
+describe('<IconButton />', () => {
     it('should call onClick function from prop when clicked', () => {
         const onClickSpy = jest.fn();
 

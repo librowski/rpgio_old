@@ -28,19 +28,16 @@ export const useResize = () => {
         return () => window.removeEventListener('resize', handleWindowResize);
     })
 
-    const handleResize = React.useCallback(_.throttle(
-        30,
-        ({ clientX }: MouseEvent) => {
-            const newSidebarWidth = windowWidth - clientX;
-            const halfWindowWidth = windowWidth / 2;
+    const handleResize = React.useCallback(({ clientX }: MouseEvent) => {
+        const newSidebarWidth = windowWidth - clientX;
+        const halfWindowWidth = windowWidth / 2;
 
-            if (_.inRange(sidebarMinWidth, halfWindowWidth, newSidebarWidth)) {
-                dispatch(setSidebarWidth(newSidebarWidth));
-            } else if (newSidebarWidth > halfWindowWidth) {
-                dispatch(setSidebarWidth(halfWindowWidth));
-            }
-        },
-    ), [dispatch, windowWidth]);
+        if (_.inRange(sidebarMinWidth, halfWindowWidth, newSidebarWidth)) {
+            dispatch(setSidebarWidth(newSidebarWidth));
+        } else if (newSidebarWidth > halfWindowWidth) {
+            dispatch(setSidebarWidth(halfWindowWidth));
+        }
+    }, [sidebarMinWidth, dispatch, windowWidth]);
 
     const onMouseDown = React.useCallback(() => {
         const onMouseUp = () => {

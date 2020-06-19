@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { installDevtools } = require('./installDevtools');
 const { windowOptions } = require('./windowOptions');
-const { isDev } = require('../../utils/modeCheck');
+const { isDev } = require('../../dev-utils/modeCheck');
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');

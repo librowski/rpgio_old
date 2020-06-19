@@ -1,13 +1,13 @@
 import { SceneCardList } from './SceneCardList';
 import React from 'react';
-import { mount, toMock } from '../../../../../../test/enzyme';
-import { Scene } from '../../../../../../store/scenes/types';
+import { mount, toMock } from '@test/enzyme';
+import { Scene } from '@store/scenes/types';
 import {
     activeSceneNameSelector,
     scenesSelector
-} from '../../../../../../store/scenes/selectors';
-import { uiDataSelector } from '../../../../../../store/userData/selectors';
-import { UserDataState } from '../../../../../../store/userData/types';
+} from '@store/scenes/selectors';
+import { uiDataSelector } from '@store/userData/selectors';
+import { UserDataState } from '@store/userData/types';
 import { SceneCard } from './SceneCard/SceneCard';
 
 jest.mock('react-redux', () => ({
@@ -25,7 +25,7 @@ jest.mock('../../../../../../store/userData/selectors', () => ({
     uiDataSelector: jest.fn(),
 }));
 
-describe('[UNIT] <SceneCardList />', () => {
+describe('<SceneCardList />', () => {
     it('should render <SceneCard /> using scenes data from store', () => {
         const fakeScenes: Scene[] = [
             { name: 'Horror', imageURL: '' },

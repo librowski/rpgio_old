@@ -20,7 +20,16 @@
             "node",
             "jest",
             "electron"
-        ]
+        ],
+        "baseUrl": "./src",
+        "paths": {
+            "@assets/*": ["assets/*"],
+            "@components/*": ["components/*"],
+            "@electron/*": ["electron/*"],
+            "@i18n/*": ["i18n/*"],
+            "@store/*": ["store/*"],
+            "@test/*": ["test/*"]
+        }
     },
     "include": [
         "src/**/*"
