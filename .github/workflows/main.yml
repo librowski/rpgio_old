@@ -19,7 +19,7 @@ jobs:
     
     - name: Test & Upload codecov
       run: |
-        yarn test:unit --coverage
+        yarn test --coverage
         bash <(curl -s https://codecov.io/bash)
     
     - name: Build
