@@ -11,7 +11,7 @@
         "dist": "NODE_ENV=production webpack --config webpack.config.js && electron-builder -p never",
         "lint": "eslint . --ext .js,.ts,.tsx --max-warnings 0",
         "lint:fix": "eslint . --ext .ts,.tsx --fix",
-        "test": "yarn test:all --testPathIgnorePatterns=[\"\\[UNIT\\]\"]",
+        "test": "yarn test:all -t='^((?!(\\[E2E\\])).)*$'",
         "test:all": "NODE_ENV=test jest",
         "test:e2e": "yarn test:all -t=\"\\[E2E\\]\"",
         "postinstall": "electron-builder install-app-deps",
