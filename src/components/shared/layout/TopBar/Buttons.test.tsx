@@ -1,14 +1,14 @@
 import { Buttons, maximizeButtonTestId } from './Buttons';
 import React from 'react';
-import { mount } from '../../../../test/enzyme';
-import { maximize, minimize, quit } from '../../../../store/app/app';
+import { mount } from '@test/enzyme';
+import { maximize, minimize, quit } from '@store/app/app';
 import { Maximize, Minus, X } from 'react-feather';
 import {
     createSpectronApp,
     getByTestId,
     start,
     teardown
-} from '../../../../test/spectron';
+} from '@test/spectron';
 import { Application } from 'spectron';
 
 jest.mock('react-redux', () => ({
@@ -16,14 +16,14 @@ jest.mock('react-redux', () => ({
     useDispatch: () => jest.fn(),
 }));
 
-jest.mock('../../../../store/app/app', () => ({
-    ...jest.requireActual('../../../../store/app/app'),
+jest.mock('@store/app/app', () => ({
+    ...jest.requireActual('@store/app/app'),
     maximize: jest.fn(),
     minimize: jest.fn(),
     quit: jest.fn(),
 }));
 
-describe('<buttons />', () => {
+describe('<Buttons />', () => {
     it('should call maximize() if maximize button was clicked', () => {
         const wrapper = mount(
             <Buttons />
@@ -64,7 +64,7 @@ describe('<buttons />', () => {
     });
 });
 
-describe('[E2E] <buttons />', () => {
+describe('[E2E] <Buttons />', () => {
     jest.dontMock('../../../../electron/electron');
     let app: Application;
 
