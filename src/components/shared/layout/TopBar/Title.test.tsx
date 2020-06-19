@@ -1,14 +1,13 @@
 import React from 'react';
 import { Title } from './Title';
-import { mount, toMock } from '../../../../test/enzyme';
-import { appInfoSelector } from '../../../../store/app/selectors';
+import { mount, toMock } from '@test/enzyme';
+import { appInfoSelector } from '@store/app/selectors';
 
-
-jest.mock('../../../../store/app/selectors', () => ({
+jest.mock('@store/app/selectors', () => ({
     appInfoSelector: jest.fn(),
 }));
 
-jest.mock('../../../../electron/electron');
+jest.mock('@electron/electron');
 
 describe('<Title />', () => {
     it('should contain app title and version information', async () => {
