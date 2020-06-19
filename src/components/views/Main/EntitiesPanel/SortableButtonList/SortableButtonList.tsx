@@ -34,18 +34,19 @@ const SortableList = SortableContainer(
 
 export const SortableButtonList: React.FC<Props> = ({
     collection,
-    ...rest
+    handleSortStart,
+    handleSortEnd,
 }) => {
     const dispatch = useDispatch();
 
     const onSortStart: SortStartHandler = (...sortStartParams) => {
         dispatch(setDragging(true));
-        rest.handleSortStart?.(...sortStartParams);
+        handleSortStart?.(...sortStartParams);
     };
 
     const onSortEnd: SortEndHandler = (...sortEndParams) => {
         dispatch(setDragging(false));
-        rest.handleSortEnd?.(...sortEndParams);
+        handleSortEnd?.(...sortEndParams);
     };
 
     return (
