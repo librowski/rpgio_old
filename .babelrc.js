@@ -1,4 +1,4 @@
-const { isTest } = require('./dev-utils/modeCheck');
+const { isTest } = require('./development/modeCheck');
 
 module.exports = {
     presets: [

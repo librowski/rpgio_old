@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { Scene, ScenesState } from '../scenes/types';
+import { Scene, ScenesState } from '@store/scenes/types';
 
 const scenes: Scene[] = [
     {

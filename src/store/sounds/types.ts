@@ -1,7 +1,12 @@
-export type Sound = {
+import { AudioFile } from '@store/types';
+
+export type SoundModel = {
     name: string;
+    files: AudioFile[];
+    scene?: string;
+    shortcut?: string;
 }
 
 export type SoundsState = {
-    sounds: Sound[];
+    sounds: SoundModel[];
 };

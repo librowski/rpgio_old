@@ -7,8 +7,8 @@
     "license": "MIT",
     "main": "src/electron/main.js",
     "scripts": {
-        "dev": "NODE_ENV=development webpack --watch --config webpack.config.js --mode=development & electron ./src/electron/main.js",
-        "dist": "NODE_ENV=production webpack --config webpack.config.js && electron-builder -p never",
+        "dev": "NODE_ENV=development webpack --watch --config webpack.config.js --mode=development & NODE_ENV=development electron ./src/electron/main.js",
+        "dist": "NODE_ENV=production webpack --config webpack.config.js && NODE_ENV=production electron-builder -p never",
         "lint": "eslint . --ext .js,.ts,.tsx --max-warnings 0",
         "lint:fix": "eslint . --ext .ts,.tsx --fix",
         "test": "yarn test:all -t='^((?!(\\[E2E\\])).)*$'",
@@ -27,6 +27,7 @@
     "homepage": "https://github.com/librowski/rpgio#readme",
     "dependencies": {
         "@reduxjs/toolkit": "^1.3.4",
+        "get-audio-duration": "^2.0.2",
         "i18next": "^19.4.1",
         "i18next-electron-language-detector": "^0.0.10",
         "lodash": "^4.17.15",
@@ -100,6 +101,7 @@
         ],
         "mac": {
             "category": "public.app-category.music"
-        }
+        },
+        "extraResources": "./src/test"
     }
 }

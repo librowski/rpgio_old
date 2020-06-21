@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SoundsState } from './types';
 import { ReorderData } from '../types';
 import { reorder } from '../utils';
-import { sounds } from '../__fake__/sounds';
+import { sounds } from '@test/sample/store/sounds';
 
 const initialState: SoundsState = {
     sounds,
@@ -14,8 +14,6 @@ const soundsSlice = createSlice({
     reducers: {
         addSound: state => state,
         removeSound: state => state,
-        pauseSound: state => state,
-        playSound: (state, {}: PayloadAction<string>) => state,
         reorderSound: (state, action: PayloadAction<ReorderData>) => {
             const { oldIndex, newIndex } = action.payload;
 
@@ -28,8 +26,6 @@ const { actions, reducer } = soundsSlice;
 const {
     addSound,
     removeSound,
-    pauseSound,
-    playSound,
     reorderSound,
 } = actions;
 
@@ -37,7 +33,5 @@ export {
     reducer as soundsReducer,
     addSound,
     removeSound,
-    pauseSound,
-    playSound,
     reorderSound,
 };
