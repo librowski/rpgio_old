@@ -21,13 +21,13 @@ type Props = {
 const SortableList = SortableContainer(
     ({ collection }: Pick<Props, 'collection'>) => (
         <Container>
-            {collection.map((itemProps, index) => (
+            { collection.map((itemProps, index) => (
                 <SortableButton
                     key={itemProps.name}
                     index={index}
                     {...itemProps}
                 />
-            ))}
+            )) }
         </Container>
     )
 );

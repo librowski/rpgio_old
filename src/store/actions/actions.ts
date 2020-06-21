@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ActionsState } from './types';
 import { ReorderData } from '../types';
 import { reorder } from '../utils';
-import { actions as fakeActions } from '../__fake__/actions';
+import { actions as fakeActions } from '@test/sample/store/actions';
 
 const initialState: ActionsState = {
     actions: fakeActions,

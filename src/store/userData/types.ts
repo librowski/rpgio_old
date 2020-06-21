@@ -4,6 +4,12 @@ export type UIState = {
     isResizing: boolean;
 }
 
+export type UserActivity = {
+    lastAudioPath?: string;
+    lastImagesPath?: string;
+}
+
 export type UserDataState = {
    ui: UIState;
+   activity: UserActivity;
 }

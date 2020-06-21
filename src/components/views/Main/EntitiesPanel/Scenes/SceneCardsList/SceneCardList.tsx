@@ -18,7 +18,7 @@ const SortableCardsContainer = SortableContainer(() => {
 
     return (
         <Container>
-            {scenes.map(({ name, ...sceneProps }, index) => (
+            { scenes.map(({ name, ...sceneProps }, index) => (
                 <SceneCard
                     {...sceneProps}
                     index={index}
@@ -27,7 +27,7 @@ const SortableCardsContainer = SortableContainer(() => {
                     name={name}
                     isActive={name === activeSceneName}
                 />
-            ))}
+            )) }
         </Container>
     );
 });

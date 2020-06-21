@@ -1,11 +1,11 @@
 import { ResizeHandle } from './ResizeHandle';
 import React from 'react';
-import { mount, toMock } from '../../../../test/enzyme';
-import { uiDataSelector } from '../../../../store/userData/selectors';
+import { mount, toMock } from '@test/enzyme';
+import { uiDataSelector } from '@store/userData/selectors';
 import {
     setResizing,
     setSidebarWidth
-} from '../../../../store/userData/userData';
+} from '@store/userData/userData';
 
 jest.mock('react-redux', () => ({
     ...jest.requireActual('react-redux'),
@@ -13,13 +13,13 @@ jest.mock('react-redux', () => ({
     useDispatch: () => jest.fn(),
 }));
 
-jest.mock('../../../../store/userData/userData', () => ({
-    ...jest.requireActual('../../../../store/userData/userData'),
+jest.mock('@store/userData/userData', () => ({
+    ...jest.requireActual('@store/userData/userData'),
     setResizing: jest.fn(),
     setSidebarWidth: jest.fn(),
 }));
 
-jest.mock('../../../../store/userData/selectors', () => ({
+jest.mock('@store/userData/selectors', () => ({
     uiDataSelector: jest.fn(),
 }));
 

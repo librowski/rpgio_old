@@ -1,4 +1,4 @@
-import { Action } from '../actions/types';
+import { Action } from '@store/actions/types';
 
 export const actions: Action[] = [
     { name: 'Gradual mute' },

@@ -5,18 +5,19 @@ import * as _ from 'lodash/fp';
 import { Header } from '../../../../shared/typography/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import { soundsSelector } from '@store/sounds/selectors';
-import { playSound, reorderSound } from '@store/sounds/sounds';
-import { Sound } from '@store/sounds/types';
+import { reorderSound } from '@store/sounds/sounds';
+import { SoundModel } from '@store/sounds/types';
 import { SortEnd } from 'react-sortable-hoc';
+import { playSound } from '@player/player';
 
 export const Sounds: React.FC = () => {
     const dispatch = useDispatch();
     const sounds = useSelector(soundsSelector);
 
     const sortableSoundCollection = _.map(
-        (sound: Sound) => ({
+        (sound: SoundModel) => ({
             ...sound,
-            onClick: () => dispatch(playSound(sound.name))
+            onClick: () => playSound(sound),
         })
     )(sounds);
 

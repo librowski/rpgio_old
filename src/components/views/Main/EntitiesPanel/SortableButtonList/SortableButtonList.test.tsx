@@ -22,7 +22,7 @@ describe('<SortableButtonList />', () => {
         ];
 
         const wrapper = mount(
-            <SortableButtonList collection={collection}/>
+            <SortableButtonList collection={collection} />
         );
 
         expect(wrapper.contains('Battle ambient'))
