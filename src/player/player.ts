@@ -1,14 +1,16 @@
 import { Sound } from '@player/audio/Sound';
 import { SoundModel } from '@store/sounds/types';
 
-const sounds: Record<string, Sound> = {};
+export const sounds: Record<string, Sound> = {};
 
 export const playSound = (model: SoundModel) => {
-    const sound = new Sound(model);
-    sounds[model.name] = sound;
-    sound.play();
+    if (!sounds[model.name]) {
+        sounds[model.name] = new Sound(model);
+    }
+
+    sounds[model.name].play();
 }
 
-export const muteSound = (model: SoundModel) =>
-    sounds[model.name]?.mute();
+export const muteSound = ({ name }: SoundModel) =>
+    sounds[name]?.mute();
 

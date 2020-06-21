@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const WEB_AUDIO_INSPECTOR = 'cmhomipkklckpomafalojobppmmidlgl';
+
 const installDevtools = () => {
     const {
         default: installExtension,
@@ -7,6 +9,7 @@ const installDevtools = () => {
     } = require('electron-devtools-installer');
     installExtension(REACT_DEVELOPER_TOOLS);
     installExtension(REDUX_DEVTOOLS);
+    installExtension(WEB_AUDIO_INSPECTOR);
 };
 
 module.exports = { installDevtools };

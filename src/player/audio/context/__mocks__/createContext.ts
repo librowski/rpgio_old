@@ -11,12 +11,17 @@ const createFakeAudioNode = () => ({
     disconnect: jest.fn(),
 });
 
-export const soundsNode = createFakeGainNode();
-export const scenesNode = createFakeGainNode();
-export const tracksNode = createFakeGainNode();
-
-export const ctx = {
+const ctx = {
     destination: {},
     createMediaElementSource: jest.fn(() => createFakeAudioNode()),
     createGain: jest.fn(() => createFakeGainNode()),
 };
+
+export const createContext = () => ({
+    ctx,
+    mainNode: createFakeGainNode(),
+    soundsNode: createFakeGainNode(),
+    scenesNode: createFakeGainNode(),
+    tracksNode: createFakeGainNode(),
+})
+
