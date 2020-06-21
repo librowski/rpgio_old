@@ -28,7 +28,8 @@
             "@electron/*": ["electron/*"],
             "@i18n/*": ["i18n/*"],
             "@store/*": ["store/*"],
-            "@test/*": ["test/*"]
+            "@test/*": ["test/*"],
+            "@player/*": ["player/*"]
         }
     },
     "include": [

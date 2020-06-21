@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ScenesState } from './types';
-import { scenesState } from '../__fake__/scenes';
+import { scenesState } from '@test/sample/store/scenes';
 import { ReorderData } from '../types';
 import { reorder } from '../utils';
 

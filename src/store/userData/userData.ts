@@ -6,7 +6,8 @@ const initialState: UserDataState = {
         sidebarWidth: 300,
         isDragging: false,
         isResizing: false,
-    }
+    },
+    activity: {}
 };
 
 const userData = createSlice({
@@ -21,6 +22,12 @@ const userData = createSlice({
         },
         setResizing: (state, action: PayloadAction<boolean>) => {
             state.ui.isResizing = action.payload;
+        },
+        setLastAudioPath: (state, action: PayloadAction<string>) => {
+            state.activity.lastAudioPath = action.payload;
+        },
+        setLastImagesPath: (state, action: PayloadAction<string>) => {
+            state.activity.lastImagesPath = action.payload;
         }
     }
 });
@@ -29,12 +36,16 @@ const { actions, reducer } = userData;
 const {
     setSidebarWidth,
     setDragging,
-    setResizing
+    setResizing,
+    setLastAudioPath,
+    setLastImagesPath,
 } = actions;
 
 export {
     reducer as userDataReducer,
     setSidebarWidth,
     setDragging,
-    setResizing
+    setResizing,
+    setLastAudioPath,
+    setLastImagesPath,
 };

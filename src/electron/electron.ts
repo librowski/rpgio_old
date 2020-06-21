@@ -1,5 +1,5 @@
-const { app, getCurrentWindow } = window.require('electron').remote;
+const { app, dialog, getCurrentWindow } = window.require('electron').remote;
 
 const appWindow = getCurrentWindow();
 
-export { app, appWindow };
+export { app, dialog, appWindow };
