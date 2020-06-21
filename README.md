@@ -1,5 +1,5 @@
 # rpgio
-[![codecov](https://codecov.io/gh/librowski/rpgio/branch/master/graph/badge.svg)](https://codecov.io/gh/librowski/rpgio)
+[![codecov](https://img.shields.io/codecov/c/gh/librowski/rpgio?style=for-the-badge)](https://codecov.io/gh/librowski/rpgio)
 
 ## Initial design
 
