@@ -909,10 +909,17 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.3.1", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.8.4":
   version "7.10.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
   integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.12.0":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.1.tgz#b4116a6b6711d010b2dad3b7b6e43bf1b9954740"
+  integrity sha512-J5AIf3vPj3UwXaAzb5j1xM4WAQDX3EMgemF8rjCP3SoW09LfRKAXQKt6CoVYl230P6iWdRcBbnLDDdnqWxZSCA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -5382,12 +5389,12 @@ i18next-electron-language-detector@^0.0.10:
   resolved "https://registry.yarnpkg.com/i18next-electron-language-detector/-/i18next-electron-language-detector-0.0.10.tgz#6fdb01df5a47c40ca3821458449da88220c4baf8"
   integrity sha512-l/CdtK5i6BB7h5OGKadUK+Q0q4e4EYXZSDV+Hetxjdv4C8RoYPNbqfTIpcc4RpIO3Dty05Xt8TxV+HyFd6opeA==
 
-i18next@^19.4.1:
-  version "19.5.0"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.5.0.tgz#b58d2359a402a29e589838b99b7af170e19a7824"
-  integrity sha512-IOJREFitdCfuRtFVFRomU30TG++mk6dIWHuk7wDJNAoXwJzQbWkxWClnA975loh1jLBnXYPUO6oFjiNwg5TV4g==
+i18next@^19.8.3:
+  version "19.8.3"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.8.3.tgz#10df7222db8c23389b13bceb9ba67a5e20a0241e"
+  integrity sha512-eVrqAw2gGGYYJaJMYw4VM1FNFawLD4b84IsoTZMVXeWHaxAM2gyTa34j2Sip15UkBz/LrSxdFJj0Jhlrz7EvHA==
   dependencies:
-    "@babel/runtime" "^7.10.1"
+    "@babel/runtime" "^7.12.0"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.17, iconv-lite@^0.4.24:
   version "0.4.24"
