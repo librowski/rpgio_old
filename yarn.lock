@@ -1804,10 +1804,10 @@
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
   integrity sha512-OCutwjDZ4aFS6PB1UZ988C4YgwlBHJd6wCeQqaLdmadZ/7e+w79+hbMUFC1QXDNCmdyoRfAFdm0RypzwR+Qpag==
 
-"@types/eslint@^7.2.4":
-  version "7.2.4"
-  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-7.2.4.tgz#d12eeed7741d2491b69808576ac2d20c14f74c41"
-  integrity sha512-YCY4kzHMsHoyKspQH+nwSe+70Kep7Vjt2X+dZe5Vs2vkRudqtoFoUIv1RlJmZB8Hbp7McneupoZij4PadxsK5Q==
+"@types/eslint@^7.2.6":
+  version "7.2.6"
+  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-7.2.6.tgz#5e9aff555a975596c03a98b59ecd103decc70c3c"
+  integrity sha512-I+1sYH+NPQ3/tVqCeUSBwTE/0heyvtXqpIopUUArlBm0Kpocb8FbMa3AZ/ASKIFpN3rnEx932TTXDbt9OXsNDw==
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -4836,13 +4836,14 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz#21fdc8fbcd9c795cc0321f0563702095751511a8"
   integrity sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
 
-eslint-webpack-plugin@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-webpack-plugin/-/eslint-webpack-plugin-2.2.1.tgz#2b3d1cf1a568419f14dc8472e9f833732be04504"
-  integrity sha512-1TezAlOgzDlIwMeCdfWGf/1Blf0SytfBvJ9Sy3HIFsxBlM1aL86otGRuvL1MaktnTBKe5QsMEOAArAmVEkpPZw==
+eslint-webpack-plugin@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-webpack-plugin/-/eslint-webpack-plugin-2.5.1.tgz#e8a43cd1924923f403bc7cb32d45b9c7d056ed13"
+  integrity sha512-LB6baXTm62IwSu5gxj4xQ8URsMc1Wk95WLcK8pFklLvk4i66lS5v5knpVzCLG9u7NXYThfIMdvr/lYe2A3ZbWw==
   dependencies:
-    "@types/eslint" "^7.2.4"
+    "@types/eslint" "^7.2.6"
     arrify "^2.0.1"
+    jest-worker "^26.6.2"
     micromatch "^4.0.2"
     schema-utils "^3.0.0"
 
@@ -7100,6 +7101,15 @@ jest-worker@^25.5.0:
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-25.5.0.tgz#2611d071b79cea0f43ee57a3d118593ac1547db1"
   integrity sha512-/dsSmUkIy5EBGfv/IjjqmFxrNAUpBERfGs1oHROyD7yxjG/w+t0GOJDX8O1k32ySmd7+a5IhnJU2qQFcJ4n1vw==
   dependencies:
+    merge-stream "^2.0.0"
+    supports-color "^7.0.0"
+
+jest-worker@^26.6.2:
+  version "26.6.2"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.6.2.tgz#7f72cbc4d643c365e27b9fd775f9d0eaa9c7a8ed"
+  integrity sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==
+  dependencies:
+    "@types/node" "*"
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
