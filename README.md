@@ -22,16 +22,16 @@ Run these commands with `yarn`:
 
 ## Directory structure
 ```
- 📂 development
- 📂 src
- ┣ 📂 assets
- ┣ 📂 components
- ┃ ┣ 📂 providers
- ┃ ┣ 📂 shared
- ┃ ┣ 📂 views
- ┣ 📂 electron
- ┣ 📂 i18n
- ┣ 📂 player
- ┣ 📂 store
- ┗ 📂 test
+ 📂 development             | Development related utils
+ 📂 src                     |
+ ┣ 📂 assets                | Fonts, icons, images, etc.
+ ┣ 📂 components            | React components 
+ ┃ ┣ 📂 providers           | Global react providers (i.e. react-router)
+ ┃ ┣ 📂 shared              | Shared components - inputs, buttons, typography
+ ┃ ┣ 📂 views               | Application views / pages
+ ┣ 📂 electron              | Electron-related utils
+ ┣ 📂 i18n                  | Locale and i18n logic
+ ┣ 📂 player                | Audio-player / web-audio related files
+ ┣ 📂 store                 | Redux store, actions and selectors
+ ┗ 📂 test                  | Testing utilities
  ```
