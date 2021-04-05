@@ -14,23 +14,34 @@
 ⚠️ _The command names are quite ambiguous and will most likely be changed_
 
 Run these commands with `yarn`:
-    - `build` to create a JS build runnable by electron
-    - `app` to run this build
-    - `start` to combine the commands above
-    - `lint:ts` and `lint:css` to check for code-style issues
-    - `test`, `test:e2e` and `test:all` to run the tests
+- `build` to create a JS build runnable by electron
+- `app` to run this build
+- `start` to combine the commands above
+- `lint:ts` and `lint:css` to check for code-style issues
+- `test`, `test:e2e` and `test:all` to run the tests
 
 ## Directory structure
 
- 📂 development 
+ 📂 development
+
  📂 src
+
  ┣ 📂 assets
+
  ┣ 📂 components
+
  ┃ ┣ 📂 providers
+
  ┃ ┣ 📂 shared
+
  ┃ ┣ 📂 views
+
  ┣ 📂 electron
+
  ┣ 📂 i18n
+
  ┣ 📂 player
+
  ┣ 📂 store
+
  ┗ 📂 test
