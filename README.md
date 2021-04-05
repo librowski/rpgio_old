@@ -21,27 +21,17 @@ Run these commands with `yarn`:
 - `test`, `test:e2e` and `test:all` to run the tests
 
 ## Directory structure
-
+```
  📂 development
-
  📂 src
-
  ┣ 📂 assets
-
  ┣ 📂 components
-
  ┃ ┣ 📂 providers
-
  ┃ ┣ 📂 shared
-
  ┃ ┣ 📂 views
-
  ┣ 📂 electron
-
  ┣ 📂 i18n
-
  ┣ 📂 player
-
  ┣ 📂 store
-
  ┗ 📂 test
+ ```
