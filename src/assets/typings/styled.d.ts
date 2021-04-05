@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-interface */
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
 import 'styled-components';
 
 declare module 'styled-components' {
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    export type DefaultTheme = { } & Theme
+    interface DefaultTheme extends Theme {}
 }
