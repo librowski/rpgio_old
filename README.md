@@ -8,3 +8,29 @@
 ## Initial design
 
 <img src='https://i.ibb.co/9tSy9Wr/Main.png' width='100%' alt='initial design' />
+
+## Running
+
+⚠️ _The command names are quite ambiguous and will most likely be changed_
+
+Run these commands with `yarn`:
+    - `build` to create a JS build runnable by electron
+    - `app` to run this build
+    - `start` to combine the commands above
+    - `lint:ts` and `lint:css` to check for code-style issues
+    - `test`, `test:e2e` and `test:all` to run the tests
+
+## Directory structure
+
+ 📂 development 
+ 📂 src
+ ┣ 📂 assets
+ ┣ 📂 components
+ ┃ ┣ 📂 providers
+ ┃ ┣ 📂 shared
+ ┃ ┣ 📂 views
+ ┣ 📂 electron
+ ┣ 📂 i18n
+ ┣ 📂 player
+ ┣ 📂 store
+ ┗ 📂 test

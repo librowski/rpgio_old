@@ -22,7 +22,12 @@
         "**/.scannerwork": true,
         "**/public": true,
         "**/reports": true,
-        "**/.vscode": true
+        "**/.vscode": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/yarn-error.log": true,
+        ".idea/workspace.xml": true
     },
     "typescript.preferences.importModuleSpecifier": "auto",
     "typescript.preferences.quoteStyle": "single",
