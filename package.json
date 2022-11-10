@@ -68,7 +68,7 @@
         "babel-plugin-module-resolver": "^4.0.0",
         "babel-plugin-styled-components": "^1.11.1",
         "css-loader": "^3.5.1",
-        "electron": "^8.2.1",
+        "electron": "^21.2.3",
         "electron-builder": "^22.4.1",
         "electron-devtools-installer": "^3.1.1",
         "enzyme": "^3.11.0",
